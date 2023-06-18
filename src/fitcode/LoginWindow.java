@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package heathproject;
+package fitcode;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
@@ -60,8 +60,6 @@ public class LoginWindow extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel3.setText("Login");
-
-        PasswordInput.setEchoChar('*');
 
         ShowPasswordBox.setText("Mostrar Senha");
         ShowPasswordBox.addActionListener(new java.awt.event.ActionListener() {

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package heathproject;
+package fitcode;
 
 import javax.swing.JOptionPane;
 import java.sql.*;
@@ -126,8 +126,6 @@ public class RegisterWindow extends javax.swing.JFrame {
         jLabel1.setText("Nome");
 
         jLabel2.setText("Email");
-
-        PasswordInput.setEchoChar('*');
 
         ShowPasswordBox.setText("Mostrar Senha");
         ShowPasswordBox.addActionListener(new java.awt.event.ActionListener() {
