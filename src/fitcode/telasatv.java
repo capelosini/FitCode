@@ -32,7 +32,7 @@ public class telasatv extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         userNameLabel = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        GOTOYourInformation = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -85,9 +85,14 @@ public class telasatv extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(226, 249, 206));
 
-        jButton1.setBackground(new java.awt.Color(48, 165, 88));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("Suas informações");
+        GOTOYourInformation.setBackground(new java.awt.Color(48, 165, 88));
+        GOTOYourInformation.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        GOTOYourInformation.setText("Suas informações");
+        GOTOYourInformation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GOTOYourInformationActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(48, 165, 88));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -131,7 +136,7 @@ public class telasatv extends javax.swing.JFrame {
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(GOTOYourInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -141,7 +146,7 @@ public class telasatv extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(11, 11, 11)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(GOTOYourInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -184,6 +189,11 @@ public class telasatv extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void GOTOYourInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GOTOYourInformationActionPerformed
+        // TODO add your handling code here:
+        new YourInformation(this.user).setVisible(true);
+    }//GEN-LAST:event_GOTOYourInformationActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -220,7 +230,7 @@ public class telasatv extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton GOTOYourInformation;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
