@@ -9,12 +9,15 @@ package fitcode;
  * @author vzako
  */
 public class HealthRoutines extends javax.swing.JFrame {
-
+    
+    User user;
+    
     /**
      * Creates new form HealthRoutines
      */
-    public HealthRoutines() {
+    public HealthRoutines(User user) {
         initComponents();
+        this.user=user;
     }
 
     /**
@@ -25,8 +28,6 @@ public class HealthRoutines extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -72,7 +73,7 @@ public class HealthRoutines extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HealthRoutines().setVisible(true);
+                new HealthRoutines(null).setVisible(true);
             }
         });
     }

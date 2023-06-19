@@ -148,7 +148,7 @@ public class LoginWindow extends javax.swing.JFrame {
             if(isRealUser){
                 System.out.println("Login Success!");
                 User user = db.getUser(EmailInput.getText().strip(), PasswordInput.getText().strip());
-                new telasatv(user).setVisible(true);
+                new MainMenu(user).setVisible(true);
                 this.setVisible(false);
             } else{
                 JOptionPane.showMessageDialog(null, "Confira se os dados estão corretos!");
