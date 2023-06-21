@@ -12,8 +12,8 @@ public class LoginWindow extends javax.swing.JFrame {
     
     public LoginWindow() {
         initComponents();
-        db = new DB();
-        db.connectDB();
+        this.db = new DB();
+        this.db.connectDB();
     }
 
     /**
@@ -37,6 +37,7 @@ public class LoginWindow extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
+        setBackground(new java.awt.Color(226, 249, 206));
         setResizable(false);
         setSize(new java.awt.Dimension(537, 380));
 
@@ -60,6 +61,8 @@ public class LoginWindow extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel3.setText("Login");
+
+        PasswordInput.setEchoChar('*');
 
         ShowPasswordBox.setText("Mostrar Senha");
         ShowPasswordBox.addActionListener(new java.awt.event.ActionListener() {

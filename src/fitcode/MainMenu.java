@@ -42,6 +42,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Página principal");
+        setPreferredSize(new java.awt.Dimension(860, 720));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(48, 165, 88));
@@ -88,6 +89,8 @@ public class MainMenu extends javax.swing.JFrame {
         GOTOYourInformation.setBackground(new java.awt.Color(48, 165, 88));
         GOTOYourInformation.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         GOTOYourInformation.setText("Suas informações");
+        GOTOYourInformation.setBorderPainted(false);
+        GOTOYourInformation.setFocusPainted(false);
         GOTOYourInformation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GOTOYourInformationActionPerformed(evt);
@@ -97,6 +100,7 @@ public class MainMenu extends javax.swing.JFrame {
         GOTOTrainingBTN.setBackground(new java.awt.Color(48, 165, 88));
         GOTOTrainingBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         GOTOTrainingBTN.setText("Seus treinos");
+        GOTOTrainingBTN.setFocusPainted(false);
         GOTOTrainingBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GOTOTrainingBTNActionPerformed(evt);
@@ -106,6 +110,7 @@ public class MainMenu extends javax.swing.JFrame {
         GOTOFoodBTN.setBackground(new java.awt.Color(48, 165, 88));
         GOTOFoodBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         GOTOFoodBTN.setText("Alimentação");
+        GOTOFoodBTN.setFocusPainted(false);
         GOTOFoodBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GOTOFoodBTNActionPerformed(evt);
@@ -115,6 +120,7 @@ public class MainMenu extends javax.swing.JFrame {
         GOTOHealthRoutines.setBackground(new java.awt.Color(48, 165, 88));
         GOTOHealthRoutines.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         GOTOHealthRoutines.setText("Programas de saúde");
+        GOTOHealthRoutines.setFocusPainted(false);
         GOTOHealthRoutines.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GOTOHealthRoutinesActionPerformed(evt);
@@ -130,6 +136,7 @@ public class MainMenu extends javax.swing.JFrame {
         GOTOAboutUsBTN.setBackground(new java.awt.Color(48, 165, 88));
         GOTOAboutUsBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         GOTOAboutUsBTN.setText("Sobre nós");
+        GOTOAboutUsBTN.setFocusPainted(false);
         GOTOAboutUsBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GOTOAboutUsBTNActionPerformed(evt);
