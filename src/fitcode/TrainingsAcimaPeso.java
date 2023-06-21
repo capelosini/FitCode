@@ -6,19 +6,15 @@ package fitcode;
 
 /**
  *
- * @author vzako
+ * @author Gustavo
  */
+public class TrainingsAcimaPeso extends javax.swing.JFrame {
 
-public class Trainings extends javax.swing.JFrame {
-
-    User user;
-    
     /**
-     * Creates new form Trainings
+     * Creates new form TrainingsAcimaPeso
      */
-    public Trainings(User user) {
+    public TrainingsAcimaPeso() {
         initComponents();
-        this.user=user;
     }
 
     /**
@@ -35,22 +31,19 @@ public class Trainings extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox4 = new javax.swing.JCheckBox();
+        jLabel7 = new javax.swing.JLabel();
+        jCheckBox5 = new javax.swing.JCheckBox();
+        jCheckBox6 = new javax.swing.JCheckBox();
 
-        setTitle("Treinos");
-        setPreferredSize(new java.awt.Dimension(860, 720));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Treino acima do peso");
         setResizable(false);
-        setSize(new java.awt.Dimension(0, 0));
 
         jPanel2.setBackground(new java.awt.Color(48, 165, 88));
 
@@ -101,95 +94,53 @@ public class Trainings extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(226, 249, 206));
         jPanel3.setLayout(null);
 
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
-        jLabel4.setText("Obesidade");
-        jPanel3.add(jLabel4);
-        jLabel4.setBounds(570, 370, 260, 55);
-
-        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
-        jLabel5.setText("Treinos diários");
-        jPanel3.add(jLabel5);
-        jLabel5.setBounds(30, 0, 260, 55);
-
-        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
-        jLabel6.setText("Abaixo do peso");
-        jPanel3.add(jLabel6);
-        jLabel6.setBounds(110, 70, 270, 55);
-
-        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
-        jLabel7.setText("Normal");
-        jPanel3.add(jLabel7);
-        jLabel7.setBounds(590, 70, 190, 55);
-
-        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
-        jLabel8.setText("Acima do peso");
-        jPanel3.add(jLabel8);
-        jLabel8.setBounds(110, 370, 290, 55);
-
-        jButton2.setBackground(new java.awt.Color(48, 165, 88));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setText("Ver treinos");
-        jButton2.setFocusPainted(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton2);
-        jButton2.setBounds(570, 470, 150, 60);
-
-        jButton3.setBackground(new java.awt.Color(48, 165, 88));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton3.setText("Ver treinos");
-        jButton3.setFocusPainted(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton3);
-        jButton3.setBounds(150, 150, 150, 60);
-
-        jButton4.setBackground(new java.awt.Color(48, 165, 88));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton4.setText("Ver treinos");
-        jButton4.setFocusPainted(false);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton4);
-        jButton4.setBounds(570, 150, 150, 60);
-
-        jButton5.setBackground(new java.awt.Color(48, 165, 88));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton5.setText("Ver treinos");
-        jButton5.setFocusPainted(false);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton5);
-        jButton5.setBounds(150, 470, 150, 60);
-
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 0, 51));
         jLabel3.setText("Em caso de alteração na prática e tipo de treino consulte um médico ou especialista.");
         jPanel3.add(jLabel3);
-        jLabel3.setBounds(190, 280, 520, 20);
+        jLabel3.setBounds(20, 590, 520, 20);
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 0, 51));
         jLabel9.setText("ATENÇÃO: Utilize os treinos que condizem com seus status de saúde.");
         jPanel3.add(jLabel9);
-        jLabel9.setBounds(230, 260, 430, 20);
+        jLabel9.setBounds(20, 570, 430, 20);
+
+        jCheckBox1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jCheckBox1.setText("Treino...");
+        jPanel3.add(jCheckBox1);
+        jCheckBox1.setBounds(500, 260, 170, 70);
+
+        jCheckBox2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jCheckBox2.setText("Treino...");
+        jPanel3.add(jCheckBox2);
+        jCheckBox2.setBounds(120, 110, 170, 70);
+
+        jCheckBox3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jCheckBox3.setText("Treino...");
+        jPanel3.add(jCheckBox3);
+        jCheckBox3.setBounds(500, 110, 170, 70);
+
+        jCheckBox4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jCheckBox4.setText("Treino...");
+        jPanel3.add(jCheckBox4);
+        jCheckBox4.setBounds(500, 400, 170, 70);
+
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
+        jLabel7.setText("Treinos para acima do peso");
+        jPanel3.add(jLabel7);
+        jLabel7.setBounds(20, 20, 620, 55);
+
+        jCheckBox5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jCheckBox5.setText("Treino...");
+        jPanel3.add(jCheckBox5);
+        jCheckBox5.setBounds(120, 260, 170, 70);
+
+        jCheckBox6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jCheckBox6.setText("Treino...");
+        jPanel3.add(jCheckBox6);
+        jCheckBox6.setBounds(120, 400, 170, 70);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -214,22 +165,6 @@ public class Trainings extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -247,38 +182,36 @@ public class Trainings extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Trainings.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TrainingsAcimaPeso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Trainings.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TrainingsAcimaPeso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Trainings.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TrainingsAcimaPeso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Trainings.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TrainingsAcimaPeso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Trainings(null).setVisible(true);
+                new TrainingsAcimaPeso().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBox5;
+    private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
