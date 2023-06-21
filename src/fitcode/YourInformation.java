@@ -139,13 +139,13 @@ public class YourInformation extends javax.swing.JFrame {
         jLabel7.setBounds(33, 149, 54, 55);
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("Britannic Bold", 3, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel8.setText("Name");
         jPanel3.add(jLabel8);
         jLabel8.setBounds(249, 149, 55, 55);
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setFont(new java.awt.Font("Britannic Bold", 3, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel9.setText("Name");
         jPanel3.add(jLabel9);
         jLabel9.setBounds(101, 76, 55, 55);
@@ -157,7 +157,7 @@ public class YourInformation extends javax.swing.JFrame {
         jLabel10.setBounds(260, 390, 35, 41);
 
         jLabel11.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel11.setFont(new java.awt.Font("Britannic Bold", 3, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel11.setText("Name");
         jPanel3.add(jLabel11);
         jLabel11.setBounds(310, 380, 55, 55);
@@ -224,13 +224,13 @@ public class YourInformation extends javax.swing.JFrame {
         jLabel19.setBounds(450, 390, 56, 41);
 
         jLabel20.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel20.setFont(new java.awt.Font("Britannic Bold", 3, 18)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel20.setText("Name");
         jPanel3.add(jLabel20);
         jLabel20.setBounds(520, 380, 55, 55);
 
         jLabel22.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel22.setFont(new java.awt.Font("Britannic Bold", 3, 18)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel22.setText("Name");
         jPanel3.add(jLabel22);
         jLabel22.setBounds(105, 149, 55, 55);

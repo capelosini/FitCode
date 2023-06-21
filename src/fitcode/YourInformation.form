@@ -225,7 +225,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Britannic Bold" size="18" style="3"/>
+                  <Font name="Segoe UI" size="18" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Name"/>
               </Properties>
@@ -241,7 +241,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Britannic Bold" size="18" style="3"/>
+                  <Font name="Segoe UI" size="18" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Name"/>
               </Properties>
@@ -273,7 +273,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Britannic Bold" size="18" style="3"/>
+                  <Font name="Segoe UI" size="18" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Name"/>
               </Properties>
@@ -448,7 +448,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Britannic Bold" size="18" style="3"/>
+                  <Font name="Segoe UI" size="18" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Name"/>
               </Properties>
@@ -464,7 +464,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Britannic Bold" size="18" style="3"/>
+                  <Font name="Segoe UI" size="18" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Name"/>
               </Properties>
