@@ -151,6 +151,7 @@ public class LoginWindow extends javax.swing.JFrame {
             if(isRealUser){
                 System.out.println("Login Success!");
                 User user = db.getUser(EmailInput.getText().strip(), PasswordInput.getText().strip());
+                db.closeConn();
                 new MainMenu(user).setVisible(true);
                 this.setVisible(false);
             } else{

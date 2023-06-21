@@ -13,11 +13,16 @@ import java.sql.*;
  */
 public class RegisterWindow extends javax.swing.JFrame {
 
+    DB db;
+    
     /**
      * Creates new form RegisterWindow
      */
     public RegisterWindow() {
         initComponents();
+        DB db = new DB();
+        db.connectDB();
+        this.db=db;
     }
 
     
@@ -251,14 +256,14 @@ public class RegisterWindow extends javax.swing.JFrame {
     private void RegisterBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterBTNActionPerformed
         if(EmailInput.getText().strip().equals("") || PasswordInput.getText().strip().equals("") || FirstNameInput.getText().strip().equals("") || SecondNameInput.getText().strip().equals("") || HeightInput.getText().strip().equals("") || WeightInput.getText().strip().equals("")){
             JOptionPane.showMessageDialog(null, "Confira suas respostas!");
-        } else{
+        } else if(this.db.emailExists(EmailInput.getText().strip())){
+            JOptionPane.showMessageDialog(null, "Este email já possui uma conta!");
+        }else{
             try{
                 float height=Float.parseFloat(HeightInput.getText().strip());
                 float weight=Float.parseFloat(WeightInput.getText().strip());
-                DB db = new DB();
-                db.connectDB();
-                db.addUser(FirstNameInput.getText().strip(), SecondNameInput.getText().strip(), EmailInput.getText().strip(), height, weight, PasswordInput.getText().strip());
-                db.closeConn();
+                this.db.addUser(FirstNameInput.getText().strip(), SecondNameInput.getText().strip(), EmailInput.getText().strip(), height, weight, PasswordInput.getText().strip());
+                this.db.closeConn();
                 new LoginWindow().setVisible(true);
                 this.setVisible(false);
                 RegisterIMCWindow.setVisible(false);

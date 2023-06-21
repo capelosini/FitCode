@@ -124,4 +124,33 @@ public class DB {
         return null;
     }
     
+    void updateIMCUser(String email, float newHeight, float newWeight){
+        try{
+            String updateSQL = "UPDATE users SET height = ?, weight = ? WHERE email = ?";
+            PreparedStatement updateStmt = this.conn.prepareStatement(updateSQL);
+            updateStmt.setFloat(1, newHeight);
+            updateStmt.setFloat(2, newWeight);
+            updateStmt.setString(3, email);
+            updateStmt.executeUpdate();
+        } catch( SQLException e ){
+            showError(e);
+        }
+    }
+    
+    boolean emailExists(String email){
+        ResultSet users = this.getUsers();
+        
+        try{
+            while(users.next()){
+                if(users.getString("email").equals(email)){
+                    return true;
+                }
+            }
+        } catch (SQLException e){
+            this.showError(e);
+            return false;
+        }
+        return false;
+    }
+    
 }

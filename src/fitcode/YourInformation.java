@@ -4,6 +4,8 @@
  */
 package fitcode;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author vzako
@@ -18,9 +20,33 @@ public class YourInformation extends javax.swing.JFrame {
     public YourInformation(User user) {
         initComponents();
         this.user=user;
-        
+        this.refreshInfo();
     }
-
+    
+   void refreshInfo(){
+       NameLabel.setText((String)this.user.get("name")+" "+(String)this.user.get("secondName"));
+       HeightLabel.setText(Float.toString((float)this.user.get("height"))+"m");
+       WeightLabel.setText(Float.toString((float)this.user.get("weight"))+"Kg");
+       float imc = this.IMC((float)this.user.get("height"), (float)this.user.get("weight"));
+       IMCNumberLabel.setText(Float.toString(imc));
+       IMCStatusLabel.setText(IMCStatus(imc));
+       IMCBar.setValue(Math.round(imc));
+   }
+   
+   float IMC(float h, float w){
+       return w/(h*h);
+   }
+   
+   String IMCStatus(float imc){
+       if (imc < 18.5){ return "Abaixo do Peso"; }
+       else if(imc < 25){ return "Normal"; }
+       else if(imc < 30){ return "Acima do Peso"; }
+       else if(imc < 35){ return "Obesidade I"; }
+       else if(imc < 40){ return "Obesidade II"; }
+       else if(imc < 50){ return "Obesidade III"; }
+       else{ return "Obesidade IV"; }
+   }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,20 +56,27 @@ public class YourInformation extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        EditWindow = new javax.swing.JFrame();
+        jPanel4 = new javax.swing.JPanel();
+        EditBTN = new javax.swing.JButton();
+        HeightInput = new javax.swing.JTextField();
+        WeightInput = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BackToMenuBTN = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        WeightLabel = new javax.swing.JLabel();
+        NameLabel = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        IMCNumberLabel = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -51,17 +84,89 @@ public class YourInformation extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jProgressBar1 = new javax.swing.JProgressBar();
+        IMCBar = new javax.swing.JProgressBar();
         jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        IMCStatusLabel = new javax.swing.JLabel();
+        HeightLabel = new javax.swing.JLabel();
+        GOTOEditWindowBTN = new javax.swing.JButton();
 
+        EditWindow.setTitle("Editar");
+        EditWindow.setLocation(new java.awt.Point(500, 250));
+        EditWindow.setResizable(false);
+        EditWindow.setSize(new java.awt.Dimension(436, 156));
+
+        jPanel4.setBackground(new java.awt.Color(226, 249, 206));
+
+        EditBTN.setBackground(new java.awt.Color(48, 165, 88));
+        EditBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        EditBTN.setText("Editar");
+        EditBTN.setFocusPainted(false);
+        EditBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditBTNActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setText("Altura (M)");
+
+        jLabel8.setText("Peso (KG)");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(EditBTN)
+                .addGap(180, 180, 180))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(109, 109, 109)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(HeightInput, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(WeightInput, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(109, 109, 109))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(HeightInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(WeightInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(EditBTN)
+                .addGap(17, 17, 17))
+        );
+
+        javax.swing.GroupLayout EditWindowLayout = new javax.swing.GroupLayout(EditWindow.getContentPane());
+        EditWindow.getContentPane().setLayout(EditWindowLayout);
+        EditWindowLayout.setHorizontalGroup(
+            EditWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        EditWindowLayout.setVerticalGroup(
+            EditWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Suas informações");
         setLocation(new java.awt.Point(850, 0));
-        setPreferredSize(new java.awt.Dimension(860, 720));
         setResizable(false);
         setSize(new java.awt.Dimension(0, 0));
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                formComponentHidden(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(226, 249, 206));
 
@@ -74,13 +179,13 @@ public class YourInformation extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
         jLabel2.setText("Code");
 
-        jButton1.setBackground(new java.awt.Color(226, 249, 206));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("< Voltar");
-        jButton1.setFocusPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BackToMenuBTN.setBackground(new java.awt.Color(226, 249, 206));
+        BackToMenuBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BackToMenuBTN.setText("< Voltar");
+        BackToMenuBTN.setFocusPainted(false);
+        BackToMenuBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BackToMenuBTNActionPerformed(evt);
             }
         });
 
@@ -90,7 +195,7 @@ public class YourInformation extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BackToMenuBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 231, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -107,7 +212,7 @@ public class YourInformation extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jButton1)
+                .addComponent(BackToMenuBTN)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -118,49 +223,49 @@ public class YourInformation extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel3.setText("Nome:");
         jPanel3.add(jLabel3);
-        jLabel3.setBounds(33, 76, 50, 55);
+        jLabel3.setBounds(33, 76, 52, 55);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
         jLabel4.setText("Suas informações");
         jPanel3.add(jLabel4);
-        jLabel4.setBounds(30, 0, 283, 55);
+        jLabel4.setBounds(30, 0, 286, 55);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel6.setText("Peso:");
         jPanel3.add(jLabel6);
-        jLabel6.setBounds(193, 149, 44, 55);
+        jLabel6.setBounds(193, 149, 46, 55);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel7.setText("Altura:");
         jPanel3.add(jLabel7);
-        jLabel7.setBounds(33, 149, 54, 55);
+        jLabel7.setBounds(33, 149, 51, 55);
 
-        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel8.setText("Name");
-        jPanel3.add(jLabel8);
-        jLabel8.setBounds(249, 149, 55, 55);
+        WeightLabel.setBackground(new java.awt.Color(255, 255, 255));
+        WeightLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        WeightLabel.setText("Name");
+        jPanel3.add(WeightLabel);
+        WeightLabel.setBounds(249, 149, 60, 55);
 
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel9.setText("Name");
-        jPanel3.add(jLabel9);
-        jLabel9.setBounds(101, 76, 55, 55);
+        NameLabel.setBackground(new java.awt.Color(255, 255, 255));
+        NameLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        NameLabel.setText("Name");
+        jPanel3.add(NameLabel);
+        NameLabel.setBounds(101, 76, 270, 55);
 
         jLabel10.setBackground(new java.awt.Color(255, 255, 255));
         jLabel10.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel10.setText("IMC:");
         jPanel3.add(jLabel10);
-        jLabel10.setBounds(260, 390, 35, 41);
+        jLabel10.setBounds(260, 390, 37, 41);
 
-        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel11.setText("Name");
-        jPanel3.add(jLabel11);
-        jLabel11.setBounds(310, 380, 55, 55);
+        IMCNumberLabel.setBackground(new java.awt.Color(255, 255, 255));
+        IMCNumberLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        IMCNumberLabel.setText("Name");
+        jPanel3.add(IMCNumberLabel);
+        IMCNumberLabel.setBounds(310, 380, 90, 55);
 
         jLabel12.setBackground(new java.awt.Color(255, 255, 255));
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -210,12 +315,12 @@ public class YourInformation extends javax.swing.JFrame {
         jPanel3.add(jLabel18);
         jLabel18.setBounds(720, 460, 89, 20);
 
-        jProgressBar1.setMaximum(50);
-        jProgressBar1.setMinimum(16);
-        jProgressBar1.setToolTipText("");
-        jProgressBar1.setValue(49);
-        jPanel3.add(jProgressBar1);
-        jProgressBar1.setBounds(110, 500, 650, 24);
+        IMCBar.setMaximum(50);
+        IMCBar.setMinimum(16);
+        IMCBar.setToolTipText("");
+        IMCBar.setValue(49);
+        jPanel3.add(IMCBar);
+        IMCBar.setBounds(110, 500, 650, 24);
 
         jLabel19.setBackground(new java.awt.Color(255, 255, 255));
         jLabel19.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
@@ -223,29 +328,29 @@ public class YourInformation extends javax.swing.JFrame {
         jPanel3.add(jLabel19);
         jLabel19.setBounds(450, 390, 56, 41);
 
-        jLabel20.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel20.setText("Name");
-        jPanel3.add(jLabel20);
-        jLabel20.setBounds(520, 380, 55, 55);
+        IMCStatusLabel.setBackground(new java.awt.Color(255, 255, 255));
+        IMCStatusLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        IMCStatusLabel.setText("Name");
+        jPanel3.add(IMCStatusLabel);
+        IMCStatusLabel.setBounds(520, 380, 240, 55);
 
-        jLabel22.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel22.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel22.setText("Name");
-        jPanel3.add(jLabel22);
-        jLabel22.setBounds(105, 149, 55, 55);
+        HeightLabel.setBackground(new java.awt.Color(255, 255, 255));
+        HeightLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        HeightLabel.setText("Name");
+        jPanel3.add(HeightLabel);
+        HeightLabel.setBounds(105, 149, 70, 55);
 
-        jButton2.setBackground(new java.awt.Color(48, 165, 88));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setText("Editar");
-        jButton2.setFocusPainted(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        GOTOEditWindowBTN.setBackground(new java.awt.Color(48, 165, 88));
+        GOTOEditWindowBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        GOTOEditWindowBTN.setText("Editar");
+        GOTOEditWindowBTN.setFocusPainted(false);
+        GOTOEditWindowBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                GOTOEditWindowBTNActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2);
-        jButton2.setBounds(322, 163, 80, 26);
+        jPanel3.add(GOTOEditWindowBTN);
+        GOTOEditWindowBTN.setBounds(340, 160, 80, 27);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -277,13 +382,41 @@ public class YourInformation extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void BackToMenuBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToMenuBTNActionPerformed
+        new MainMenu(this.user).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BackToMenuBTNActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void GOTOEditWindowBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GOTOEditWindowBTNActionPerformed
+        EditWindow.setVisible(true);
+        HeightInput.setText(Float.toString((float)this.user.get("height")));
+        WeightInput.setText(Float.toString((float)this.user.get("weight")));
+    }//GEN-LAST:event_GOTOEditWindowBTNActionPerformed
+
+    private void EditBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditBTNActionPerformed
+        if(HeightInput.getText().strip().equals("") || WeightInput.getText().strip().equals("")){
+            JOptionPane.showMessageDialog(null, "Os campos são obrigatórios!");
+        } else{
+            try{
+                float height=Float.parseFloat(HeightInput.getText().strip());
+                float weight=Float.parseFloat(WeightInput.getText().strip());
+                DB db = new DB();
+                db.connectDB();
+                db.updateIMCUser((String)this.user.get("email"), height, weight);
+                this.user.userData[4]=height;
+                this.user.userData[5]=weight;
+                db.closeConn();
+                this.refreshInfo();
+                EditWindow.setVisible(false);
+            } catch(Exception e){
+                JOptionPane.showMessageDialog(null, e);
+            }
+        }
+    }//GEN-LAST:event_EditBTNActionPerformed
+
+    private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden
+        EditWindow.setVisible(false);
+    }//GEN-LAST:event_formComponentHidden
 
     /**
      * @param args the command line arguments
@@ -321,11 +454,20 @@ public class YourInformation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton BackToMenuBTN;
+    private javax.swing.JButton EditBTN;
+    private javax.swing.JFrame EditWindow;
+    private javax.swing.JButton GOTOEditWindowBTN;
+    private javax.swing.JTextField HeightInput;
+    private javax.swing.JLabel HeightLabel;
+    private javax.swing.JProgressBar IMCBar;
+    private javax.swing.JLabel IMCNumberLabel;
+    private javax.swing.JLabel IMCStatusLabel;
+    private javax.swing.JLabel NameLabel;
+    private javax.swing.JTextField WeightInput;
+    private javax.swing.JLabel WeightLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -335,17 +477,15 @@ public class YourInformation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 }

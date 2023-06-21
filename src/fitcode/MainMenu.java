@@ -209,6 +209,7 @@ public class MainMenu extends javax.swing.JFrame {
     private void GOTOYourInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GOTOYourInformationActionPerformed
         // TODO add your handling code here:
         new YourInformation(this.user).setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_GOTOYourInformationActionPerformed
 
     private void GOTOFoodBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GOTOFoodBTNActionPerformed
