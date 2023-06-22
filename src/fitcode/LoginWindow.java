@@ -6,6 +6,7 @@ package fitcode;
 import java.awt.event.KeyEvent;
 import java.sql.*;
 import javax.swing.JOptionPane;
+import java.awt.image.BufferedImage;
 
 public class LoginWindow extends javax.swing.JFrame {
 
