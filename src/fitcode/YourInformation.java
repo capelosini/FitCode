@@ -89,6 +89,7 @@ public class YourInformation extends javax.swing.JFrame {
         IMCStatusLabel = new javax.swing.JLabel();
         HeightLabel = new javax.swing.JLabel();
         GOTOEditWindowBTN = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
 
         EditWindow.setTitle("Editar");
         EditWindow.setLocation(new java.awt.Point(500, 250));
@@ -223,25 +224,25 @@ public class YourInformation extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel3.setText("Nome:");
         jPanel3.add(jLabel3);
-        jLabel3.setBounds(33, 76, 52, 55);
+        jLabel3.setBounds(33, 76, 50, 55);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
         jLabel4.setText("Suas informações");
         jPanel3.add(jLabel4);
-        jLabel4.setBounds(30, 0, 286, 55);
+        jLabel4.setBounds(30, 0, 283, 55);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel6.setText("Peso:");
         jPanel3.add(jLabel6);
-        jLabel6.setBounds(193, 149, 46, 55);
+        jLabel6.setBounds(193, 149, 44, 55);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel7.setText("Altura:");
         jPanel3.add(jLabel7);
-        jLabel7.setBounds(33, 149, 51, 55);
+        jLabel7.setBounds(33, 149, 54, 55);
 
         WeightLabel.setBackground(new java.awt.Color(255, 255, 255));
         WeightLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -259,7 +260,7 @@ public class YourInformation extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel10.setText("IMC:");
         jPanel3.add(jLabel10);
-        jLabel10.setBounds(260, 390, 37, 41);
+        jLabel10.setBounds(260, 390, 35, 41);
 
         IMCNumberLabel.setBackground(new java.awt.Color(255, 255, 255));
         IMCNumberLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -350,7 +351,11 @@ public class YourInformation extends javax.swing.JFrame {
             }
         });
         jPanel3.add(GOTOEditWindowBTN);
-        GOTOEditWindowBTN.setBounds(340, 160, 80, 27);
+        GOTOEditWindowBTN.setBounds(340, 160, 80, 26);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\Pichau\\Documents\\NetBeansProjects\\FitCode\\imgs\\profileIMGyi.png")); // NOI18N
+        jPanel3.add(jLabel9);
+        jLabel9.setBounds(540, 20, 240, 240);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -483,6 +488,7 @@ public class YourInformation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

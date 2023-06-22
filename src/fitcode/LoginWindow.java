@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package fitcode;
+import java.awt.event.KeyEvent;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
@@ -48,6 +49,12 @@ public class LoginWindow extends javax.swing.JFrame {
             }
         });
 
+        EmailInput.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                InputKeyReleased(evt);
+            }
+        });
+
         jLabel1.setText("Senha");
 
         jLabel2.setText("Email");
@@ -63,6 +70,11 @@ public class LoginWindow extends javax.swing.JFrame {
         jLabel3.setText("Login");
 
         PasswordInput.setEchoChar('*');
+        PasswordInput.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                InputKeyReleased(evt);
+            }
+        });
 
         ShowPasswordBox.setText("Mostrar Senha");
         ShowPasswordBox.addActionListener(new java.awt.event.ActionListener() {
@@ -162,6 +174,13 @@ public class LoginWindow extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Por favor, coloque algo no campo Email e Senha");
         }
     }//GEN-LAST:event_LoginBTNActionPerformed
+
+    private void InputKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InputKeyReleased
+        // TODO add your handling code here:
+        if(evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+            LoginBTNActionPerformed(null);
+        }
+    }//GEN-LAST:event_InputKeyReleased
 
     /**
      * @param args the command line arguments
