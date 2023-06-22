@@ -9,12 +9,13 @@ package fitcode;
  * @author vzako
  */
 public class AboutUs extends javax.swing.JFrame {
-
+            User user;
     /**
      * Creates new form AboutUs
      */
-    public AboutUs() {
+    public AboutUs(User user) {
         initComponents();
+        this.user=user;
     }
 
     /**
@@ -29,7 +30,7 @@ public class AboutUs extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BackToMenuBTN = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -47,13 +48,13 @@ public class AboutUs extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
         jLabel2.setText("Code");
 
-        jButton1.setBackground(new java.awt.Color(226, 249, 206));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("< Voltar");
-        jButton1.setFocusPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BackToMenuBTN.setBackground(new java.awt.Color(226, 249, 206));
+        BackToMenuBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BackToMenuBTN.setText("< Voltar");
+        BackToMenuBTN.setFocusPainted(false);
+        BackToMenuBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BackToMenuBTNActionPerformed(evt);
             }
         });
 
@@ -63,7 +64,7 @@ public class AboutUs extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BackToMenuBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -80,7 +81,7 @@ public class AboutUs extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jButton1)
+                .addComponent(BackToMenuBTN)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -124,9 +125,11 @@ public class AboutUs extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BackToMenuBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToMenuBTNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        new MainMenu(this.user).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BackToMenuBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,13 +161,13 @@ public class AboutUs extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AboutUs().setVisible(true);
+                new AboutUs(null).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton BackToMenuBTN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;

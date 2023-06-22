@@ -9,12 +9,13 @@ package fitcode;
  * @author Gustavo
  */
 public class TrainingsObesidade extends javax.swing.JFrame {
-
+            User user;
     /**
      * Creates new form TrainingsObesidade
      */
-    public TrainingsObesidade() {
+    public TrainingsObesidade(User user) {
         initComponents();
+        this.user=user;
     }
 
     /**
@@ -29,17 +30,17 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BackToTrainingsBTN = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
+        T5OBCB = new javax.swing.JCheckBox();
+        T1OBCB = new javax.swing.JCheckBox();
+        T4OBCB = new javax.swing.JCheckBox();
+        T6OBCB = new javax.swing.JCheckBox();
         jLabel7 = new javax.swing.JLabel();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
+        T2OBCB = new javax.swing.JCheckBox();
+        T3OBCB = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Treino para obesidade");
@@ -54,13 +55,13 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
         jLabel2.setText("Code");
 
-        jButton1.setBackground(new java.awt.Color(226, 249, 206));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("< Voltar");
-        jButton1.setFocusPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BackToTrainingsBTN.setBackground(new java.awt.Color(226, 249, 206));
+        BackToTrainingsBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BackToTrainingsBTN.setText("< Voltar");
+        BackToTrainingsBTN.setFocusPainted(false);
+        BackToTrainingsBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BackToTrainingsBTNActionPerformed(evt);
             }
         });
 
@@ -70,7 +71,7 @@ public class TrainingsObesidade extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BackToTrainingsBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -87,7 +88,7 @@ public class TrainingsObesidade extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jButton1)
+                .addComponent(BackToTrainingsBTN)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -106,25 +107,33 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         jPanel3.add(jLabel9);
         jLabel9.setBounds(20, 570, 430, 20);
 
-        jCheckBox1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jCheckBox1.setText("Treino...");
-        jPanel3.add(jCheckBox1);
-        jCheckBox1.setBounds(500, 260, 170, 70);
+        T5OBCB.setBackground(new java.awt.Color(226, 249, 206));
+        T5OBCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        T5OBCB.setText("Treino...");
+        T5OBCB.setFocusPainted(false);
+        jPanel3.add(T5OBCB);
+        T5OBCB.setBounds(500, 260, 170, 70);
 
-        jCheckBox2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jCheckBox2.setText("Treino...");
-        jPanel3.add(jCheckBox2);
-        jCheckBox2.setBounds(120, 110, 170, 70);
+        T1OBCB.setBackground(new java.awt.Color(226, 249, 206));
+        T1OBCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        T1OBCB.setText("Treino...");
+        T1OBCB.setFocusPainted(false);
+        jPanel3.add(T1OBCB);
+        T1OBCB.setBounds(120, 110, 170, 70);
 
-        jCheckBox3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jCheckBox3.setText("Treino...");
-        jPanel3.add(jCheckBox3);
-        jCheckBox3.setBounds(500, 110, 170, 70);
+        T4OBCB.setBackground(new java.awt.Color(226, 249, 206));
+        T4OBCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        T4OBCB.setText("Treino...");
+        T4OBCB.setFocusPainted(false);
+        jPanel3.add(T4OBCB);
+        T4OBCB.setBounds(500, 110, 170, 70);
 
-        jCheckBox4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jCheckBox4.setText("Treino...");
-        jPanel3.add(jCheckBox4);
-        jCheckBox4.setBounds(500, 400, 170, 70);
+        T6OBCB.setBackground(new java.awt.Color(226, 249, 206));
+        T6OBCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        T6OBCB.setText("Treino...");
+        T6OBCB.setFocusPainted(false);
+        jPanel3.add(T6OBCB);
+        T6OBCB.setBounds(500, 400, 170, 70);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
@@ -132,15 +141,19 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         jPanel3.add(jLabel7);
         jLabel7.setBounds(20, 20, 620, 55);
 
-        jCheckBox5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jCheckBox5.setText("Treino...");
-        jPanel3.add(jCheckBox5);
-        jCheckBox5.setBounds(120, 260, 170, 70);
+        T2OBCB.setBackground(new java.awt.Color(226, 249, 206));
+        T2OBCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        T2OBCB.setText("Treino...");
+        T2OBCB.setFocusPainted(false);
+        jPanel3.add(T2OBCB);
+        T2OBCB.setBounds(120, 260, 170, 70);
 
-        jCheckBox6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jCheckBox6.setText("Treino...");
-        jPanel3.add(jCheckBox6);
-        jCheckBox6.setBounds(120, 400, 170, 70);
+        T3OBCB.setBackground(new java.awt.Color(226, 249, 206));
+        T3OBCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        T3OBCB.setText("Treino...");
+        T3OBCB.setFocusPainted(false);
+        jPanel3.add(T3OBCB);
+        T3OBCB.setBounds(120, 400, 170, 70);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -161,9 +174,11 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BackToTrainingsBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToTrainingsBTNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        new Trainings(this.user).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BackToTrainingsBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -195,19 +210,19 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TrainingsObesidade().setVisible(true);
+                new TrainingsObesidade(null).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
+    private javax.swing.JButton BackToTrainingsBTN;
+    private javax.swing.JCheckBox T1OBCB;
+    private javax.swing.JCheckBox T2OBCB;
+    private javax.swing.JCheckBox T3OBCB;
+    private javax.swing.JCheckBox T4OBCB;
+    private javax.swing.JCheckBox T5OBCB;
+    private javax.swing.JCheckBox T6OBCB;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

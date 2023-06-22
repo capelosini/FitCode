@@ -217,7 +217,7 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_GOTOTrainingBTNActionPerformed
 
     private void GOTOAboutUsBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GOTOAboutUsBTNActionPerformed
-        new AboutUs().setVisible(true);
+        new AboutUs(this.user).setVisible(true);
     }//GEN-LAST:event_GOTOAboutUsBTNActionPerformed
 
     private void GOTOYourInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GOTOYourInformationActionPerformed

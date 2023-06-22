@@ -32,17 +32,17 @@ public class Food extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BackToMenuBTN = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        FDComboBox = new javax.swing.JComboBox<>();
+        FDjantarTXT = new javax.swing.JTextField();
+        FDcafemanhaTXT = new javax.swing.JTextField();
+        FDalmocoTXT = new javax.swing.JTextField();
+        FDaddBTN = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        FDtabela = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -59,13 +59,13 @@ public class Food extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
         jLabel2.setText("Code");
 
-        jButton1.setBackground(new java.awt.Color(226, 249, 206));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("< Voltar");
-        jButton1.setFocusPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BackToMenuBTN.setBackground(new java.awt.Color(226, 249, 206));
+        BackToMenuBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BackToMenuBTN.setText("< Voltar");
+        BackToMenuBTN.setFocusPainted(false);
+        BackToMenuBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BackToMenuBTNActionPerformed(evt);
             }
         });
 
@@ -75,7 +75,7 @@ public class Food extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BackToMenuBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -92,7 +92,7 @@ public class Food extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jButton1)
+                .addComponent(BackToMenuBTN)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -111,47 +111,47 @@ public class Food extends javax.swing.JFrame {
         jPanel3.add(jLabel5);
         jLabel5.setBounds(30, 290, 260, 55);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Segunda-feira", "Terça-Feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo" }));
-        jPanel3.add(jComboBox1);
-        jComboBox1.setBounds(30, 80, 130, 30);
+        FDComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Segunda-feira", "Terça-Feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo" }));
+        jPanel3.add(FDComboBox);
+        FDComboBox.setBounds(30, 80, 130, 30);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        FDjantarTXT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                FDjantarTXTActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField1);
-        jTextField1.setBounds(30, 350, 200, 30);
+        jPanel3.add(FDjantarTXT);
+        FDjantarTXT.setBounds(30, 350, 200, 30);
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        FDcafemanhaTXT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                FDcafemanhaTXTActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField2);
-        jTextField2.setBounds(30, 160, 200, 30);
+        jPanel3.add(FDcafemanhaTXT);
+        FDcafemanhaTXT.setBounds(30, 160, 200, 30);
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        FDalmocoTXT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                FDalmocoTXTActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField3);
-        jTextField3.setBounds(30, 250, 200, 30);
+        jPanel3.add(FDalmocoTXT);
+        FDalmocoTXT.setBounds(30, 250, 200, 30);
 
-        jButton2.setBackground(new java.awt.Color(48, 165, 88));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setText("Adicionar");
-        jButton2.setFocusPainted(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        FDaddBTN.setBackground(new java.awt.Color(48, 165, 88));
+        FDaddBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        FDaddBTN.setText("Adicionar");
+        FDaddBTN.setFocusPainted(false);
+        FDaddBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                FDaddBTNActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2);
-        jButton2.setBounds(80, 400, 100, 26);
+        jPanel3.add(FDaddBTN);
+        FDaddBTN.setBounds(80, 400, 100, 26);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        FDtabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -193,7 +193,7 @@ public class Food extends javax.swing.JFrame {
                 "Dia da semana", "Café da manhã", "Almoço", "Jantar"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(FDtabela);
 
         jPanel3.add(jScrollPane1);
         jScrollPane1.setBounds(312, 20, 510, 520);
@@ -235,25 +235,27 @@ public class Food extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BackToMenuBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToMenuBTNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        new MainMenu(this.user).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BackToMenuBTNActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void FDjantarTXTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FDjantarTXTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_FDjantarTXTActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void FDcafemanhaTXTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FDcafemanhaTXTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_FDcafemanhaTXTActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void FDalmocoTXTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FDalmocoTXTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_FDalmocoTXTActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void FDaddBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FDaddBTNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_FDaddBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -291,9 +293,13 @@ public class Food extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton BackToMenuBTN;
+    private javax.swing.JComboBox<String> FDComboBox;
+    private javax.swing.JButton FDaddBTN;
+    private javax.swing.JTextField FDalmocoTXT;
+    private javax.swing.JTextField FDcafemanhaTXT;
+    private javax.swing.JTextField FDjantarTXT;
+    private javax.swing.JTable FDtabela;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
@@ -304,9 +310,5 @@ public class Food extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }

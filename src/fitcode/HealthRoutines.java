@@ -31,21 +31,21 @@ public class HealthRoutines extends javax.swing.JFrame {
 
         jPanel3 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jProgressBar1 = new javax.swing.JProgressBar();
+        A7CB = new javax.swing.JCheckBox();
+        AguaPGB = new javax.swing.JProgressBar();
         NameLabel = new javax.swing.JLabel();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jCheckBox8 = new javax.swing.JCheckBox();
-        jCheckBox9 = new javax.swing.JCheckBox();
-        jCheckBox10 = new javax.swing.JCheckBox();
-        jCheckBox11 = new javax.swing.JCheckBox();
-        jCheckBox12 = new javax.swing.JCheckBox();
+        A1CB = new javax.swing.JCheckBox();
+        A2CB = new javax.swing.JCheckBox();
+        A3CB = new javax.swing.JCheckBox();
+        A6CB = new javax.swing.JCheckBox();
+        A5CB = new javax.swing.JCheckBox();
+        A4CB = new javax.swing.JCheckBox();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BackToMenuBTN = new javax.swing.JButton();
 
-        setTitle("Rotina");
+        setTitle("Controle de líquido");
         setResizable(false);
 
         jPanel3.setBackground(new java.awt.Color(226, 249, 206));
@@ -57,19 +57,19 @@ public class HealthRoutines extends javax.swing.JFrame {
         jPanel3.add(jLabel6);
         jLabel6.setBounds(20, 20, 590, 55);
 
-        jCheckBox5.setBackground(new java.awt.Color(226, 249, 206));
-        jCheckBox5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jCheckBox5.setText("19:00 / 300ml");
-        jCheckBox5.setFocusPainted(false);
-        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+        A7CB.setBackground(new java.awt.Color(226, 249, 206));
+        A7CB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        A7CB.setText("19:00 / 300ml");
+        A7CB.setFocusPainted(false);
+        A7CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox5ActionPerformed(evt);
+                A7CBActionPerformed(evt);
             }
         });
-        jPanel3.add(jCheckBox5);
-        jCheckBox5.setBounds(350, 510, 170, 70);
-        jPanel3.add(jProgressBar1);
-        jProgressBar1.setBounds(126, 150, 600, 40);
+        jPanel3.add(A7CB);
+        A7CB.setBounds(350, 510, 170, 70);
+        jPanel3.add(AguaPGB);
+        AguaPGB.setBounds(126, 150, 600, 40);
 
         NameLabel.setBackground(new java.awt.Color(255, 255, 255));
         NameLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -77,77 +77,77 @@ public class HealthRoutines extends javax.swing.JFrame {
         jPanel3.add(NameLabel);
         NameLabel.setBounds(740, 140, 80, 55);
 
-        jCheckBox7.setBackground(new java.awt.Color(226, 249, 206));
-        jCheckBox7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jCheckBox7.setText("7:00 / 300ml");
-        jCheckBox7.setFocusPainted(false);
-        jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
+        A1CB.setBackground(new java.awt.Color(226, 249, 206));
+        A1CB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        A1CB.setText("7:00 / 300ml");
+        A1CB.setFocusPainted(false);
+        A1CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox7ActionPerformed(evt);
+                A1CBActionPerformed(evt);
             }
         });
-        jPanel3.add(jCheckBox7);
-        jCheckBox7.setBounds(80, 270, 170, 70);
+        jPanel3.add(A1CB);
+        A1CB.setBounds(80, 270, 170, 70);
 
-        jCheckBox8.setBackground(new java.awt.Color(226, 249, 206));
-        jCheckBox8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jCheckBox8.setText("9:00 / 300ml");
-        jCheckBox8.setFocusPainted(false);
-        jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
+        A2CB.setBackground(new java.awt.Color(226, 249, 206));
+        A2CB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        A2CB.setText("9:00 / 300ml");
+        A2CB.setFocusPainted(false);
+        A2CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox8ActionPerformed(evt);
+                A2CBActionPerformed(evt);
             }
         });
-        jPanel3.add(jCheckBox8);
-        jCheckBox8.setBounds(350, 270, 170, 70);
+        jPanel3.add(A2CB);
+        A2CB.setBounds(350, 270, 170, 70);
 
-        jCheckBox9.setBackground(new java.awt.Color(226, 249, 206));
-        jCheckBox9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jCheckBox9.setText("11:00 / 300ml");
-        jCheckBox9.setFocusPainted(false);
-        jCheckBox9.addActionListener(new java.awt.event.ActionListener() {
+        A3CB.setBackground(new java.awt.Color(226, 249, 206));
+        A3CB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        A3CB.setText("11:00 / 300ml");
+        A3CB.setFocusPainted(false);
+        A3CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox9ActionPerformed(evt);
+                A3CBActionPerformed(evt);
             }
         });
-        jPanel3.add(jCheckBox9);
-        jCheckBox9.setBounds(620, 270, 170, 70);
+        jPanel3.add(A3CB);
+        A3CB.setBounds(620, 270, 170, 70);
 
-        jCheckBox10.setBackground(new java.awt.Color(226, 249, 206));
-        jCheckBox10.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jCheckBox10.setText("17:00 / 300ml");
-        jCheckBox10.setFocusPainted(false);
-        jCheckBox10.addActionListener(new java.awt.event.ActionListener() {
+        A6CB.setBackground(new java.awt.Color(226, 249, 206));
+        A6CB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        A6CB.setText("17:00 / 300ml");
+        A6CB.setFocusPainted(false);
+        A6CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox10ActionPerformed(evt);
+                A6CBActionPerformed(evt);
             }
         });
-        jPanel3.add(jCheckBox10);
-        jCheckBox10.setBounds(620, 390, 170, 70);
+        jPanel3.add(A6CB);
+        A6CB.setBounds(620, 390, 170, 70);
 
-        jCheckBox11.setBackground(new java.awt.Color(226, 249, 206));
-        jCheckBox11.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jCheckBox11.setText("15:00 / 300ml");
-        jCheckBox11.setFocusPainted(false);
-        jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
+        A5CB.setBackground(new java.awt.Color(226, 249, 206));
+        A5CB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        A5CB.setText("15:00 / 300ml");
+        A5CB.setFocusPainted(false);
+        A5CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox11ActionPerformed(evt);
+                A5CBActionPerformed(evt);
             }
         });
-        jPanel3.add(jCheckBox11);
-        jCheckBox11.setBounds(350, 390, 170, 70);
+        jPanel3.add(A5CB);
+        A5CB.setBounds(350, 390, 170, 70);
 
-        jCheckBox12.setBackground(new java.awt.Color(226, 249, 206));
-        jCheckBox12.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jCheckBox12.setText("13:00 / 300ml");
-        jCheckBox12.setFocusPainted(false);
-        jCheckBox12.addActionListener(new java.awt.event.ActionListener() {
+        A4CB.setBackground(new java.awt.Color(226, 249, 206));
+        A4CB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        A4CB.setText("13:00 / 300ml");
+        A4CB.setFocusPainted(false);
+        A4CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox12ActionPerformed(evt);
+                A4CBActionPerformed(evt);
             }
         });
-        jPanel3.add(jCheckBox12);
-        jCheckBox12.setBounds(80, 390, 170, 70);
+        jPanel3.add(A4CB);
+        A4CB.setBounds(80, 390, 170, 70);
 
         jPanel2.setBackground(new java.awt.Color(48, 165, 88));
 
@@ -158,13 +158,13 @@ public class HealthRoutines extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
         jLabel2.setText("Code");
 
-        jButton1.setBackground(new java.awt.Color(226, 249, 206));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("< Voltar");
-        jButton1.setFocusPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BackToMenuBTN.setBackground(new java.awt.Color(226, 249, 206));
+        BackToMenuBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BackToMenuBTN.setText("< Voltar");
+        BackToMenuBTN.setFocusPainted(false);
+        BackToMenuBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BackToMenuBTNActionPerformed(evt);
             }
         });
 
@@ -174,7 +174,7 @@ public class HealthRoutines extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BackToMenuBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -191,7 +191,7 @@ public class HealthRoutines extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jButton1)
+                .addComponent(BackToMenuBTN)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -214,37 +214,39 @@ public class HealthRoutines extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BackToMenuBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToMenuBTNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        new MainMenu(this.user).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BackToMenuBTNActionPerformed
 
-    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
+    private void A7CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A7CBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox5ActionPerformed
+    }//GEN-LAST:event_A7CBActionPerformed
 
-    private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
+    private void A1CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A1CBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox7ActionPerformed
+    }//GEN-LAST:event_A1CBActionPerformed
 
-    private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
+    private void A2CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A2CBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox8ActionPerformed
+    }//GEN-LAST:event_A2CBActionPerformed
 
-    private void jCheckBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox9ActionPerformed
+    private void A3CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A3CBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox9ActionPerformed
+    }//GEN-LAST:event_A3CBActionPerformed
 
-    private void jCheckBox10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox10ActionPerformed
+    private void A6CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A6CBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox10ActionPerformed
+    }//GEN-LAST:event_A6CBActionPerformed
 
-    private void jCheckBox11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox11ActionPerformed
+    private void A5CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A5CBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox11ActionPerformed
+    }//GEN-LAST:event_A5CBActionPerformed
 
-    private void jCheckBox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox12ActionPerformed
+    private void A4CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A4CBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox12ActionPerformed
+    }//GEN-LAST:event_A4CBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -282,20 +284,20 @@ public class HealthRoutines extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox A1CB;
+    private javax.swing.JCheckBox A2CB;
+    private javax.swing.JCheckBox A3CB;
+    private javax.swing.JCheckBox A4CB;
+    private javax.swing.JCheckBox A5CB;
+    private javax.swing.JCheckBox A6CB;
+    private javax.swing.JCheckBox A7CB;
+    private javax.swing.JProgressBar AguaPGB;
+    private javax.swing.JButton BackToMenuBTN;
     private javax.swing.JLabel NameLabel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox10;
-    private javax.swing.JCheckBox jCheckBox11;
-    private javax.swing.JCheckBox jCheckBox12;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
-    private javax.swing.JCheckBox jCheckBox9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JProgressBar jProgressBar1;
     // End of variables declaration//GEN-END:variables
 }

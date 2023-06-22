@@ -33,22 +33,21 @@ public class Trainings extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BackToMenuBTN = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        TobsesoBTN = new javax.swing.JButton();
+        TabaixopesoBTN = new javax.swing.JButton();
+        TnormalBTN = new javax.swing.JButton();
+        TacimapesoBTN = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
         setTitle("Treinos");
-        setPreferredSize(new java.awt.Dimension(860, 720));
         setResizable(false);
         setSize(new java.awt.Dimension(0, 0));
 
@@ -61,13 +60,13 @@ public class Trainings extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
         jLabel2.setText("Code");
 
-        jButton1.setBackground(new java.awt.Color(226, 249, 206));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("< Voltar");
-        jButton1.setFocusPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BackToMenuBTN.setBackground(new java.awt.Color(226, 249, 206));
+        BackToMenuBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BackToMenuBTN.setText("< Voltar");
+        BackToMenuBTN.setFocusPainted(false);
+        BackToMenuBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BackToMenuBTNActionPerformed(evt);
             }
         });
 
@@ -77,7 +76,7 @@ public class Trainings extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BackToMenuBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -94,7 +93,7 @@ public class Trainings extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jButton1)
+                .addComponent(BackToMenuBTN)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -131,53 +130,53 @@ public class Trainings extends javax.swing.JFrame {
         jPanel3.add(jLabel8);
         jLabel8.setBounds(110, 370, 290, 55);
 
-        jButton2.setBackground(new java.awt.Color(48, 165, 88));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setText("Ver treinos");
-        jButton2.setFocusPainted(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        TobsesoBTN.setBackground(new java.awt.Color(48, 165, 88));
+        TobsesoBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TobsesoBTN.setText("Ver treinos");
+        TobsesoBTN.setFocusPainted(false);
+        TobsesoBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                TobsesoBTNActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2);
-        jButton2.setBounds(570, 470, 150, 60);
+        jPanel3.add(TobsesoBTN);
+        TobsesoBTN.setBounds(570, 470, 150, 60);
 
-        jButton3.setBackground(new java.awt.Color(48, 165, 88));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton3.setText("Ver treinos");
-        jButton3.setFocusPainted(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        TabaixopesoBTN.setBackground(new java.awt.Color(48, 165, 88));
+        TabaixopesoBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TabaixopesoBTN.setText("Ver treinos");
+        TabaixopesoBTN.setFocusPainted(false);
+        TabaixopesoBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                TabaixopesoBTNActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton3);
-        jButton3.setBounds(150, 150, 150, 60);
+        jPanel3.add(TabaixopesoBTN);
+        TabaixopesoBTN.setBounds(150, 150, 150, 60);
 
-        jButton4.setBackground(new java.awt.Color(48, 165, 88));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton4.setText("Ver treinos");
-        jButton4.setFocusPainted(false);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        TnormalBTN.setBackground(new java.awt.Color(48, 165, 88));
+        TnormalBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TnormalBTN.setText("Ver treinos");
+        TnormalBTN.setFocusPainted(false);
+        TnormalBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                TnormalBTNActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton4);
-        jButton4.setBounds(570, 150, 150, 60);
+        jPanel3.add(TnormalBTN);
+        TnormalBTN.setBounds(570, 150, 150, 60);
 
-        jButton5.setBackground(new java.awt.Color(48, 165, 88));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton5.setText("Ver treinos");
-        jButton5.setFocusPainted(false);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        TacimapesoBTN.setBackground(new java.awt.Color(48, 165, 88));
+        TacimapesoBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TacimapesoBTN.setText("Ver treinos");
+        TacimapesoBTN.setFocusPainted(false);
+        TacimapesoBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                TacimapesoBTNActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton5);
-        jButton5.setBounds(150, 470, 150, 60);
+        jPanel3.add(TacimapesoBTN);
+        TacimapesoBTN.setBounds(150, 470, 150, 60);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 0, 51));
@@ -210,25 +209,35 @@ public class Trainings extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BackToMenuBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToMenuBTNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        new MainMenu(this.user).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BackToMenuBTNActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void TobsesoBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TobsesoBTNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        new TrainingsObesidade(this.user).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_TobsesoBTNActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void TabaixopesoBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TabaixopesoBTNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        new TrainingAbaixoPeso(this.user).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_TabaixopesoBTNActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void TnormalBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TnormalBTNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        new TrainingsNormal(this.user).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_TnormalBTNActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void TacimapesoBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TacimapesoBTNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+        new TrainingsAcimaPeso(this.user).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_TacimapesoBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -266,11 +275,11 @@ public class Trainings extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton BackToMenuBTN;
+    private javax.swing.JButton TabaixopesoBTN;
+    private javax.swing.JButton TacimapesoBTN;
+    private javax.swing.JButton TnormalBTN;
+    private javax.swing.JButton TobsesoBTN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
