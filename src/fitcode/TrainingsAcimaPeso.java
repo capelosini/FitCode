@@ -108,32 +108,32 @@ public class TrainingsAcimaPeso extends javax.swing.JFrame {
         jLabel9.setBounds(20, 570, 430, 20);
 
         T5APCB.setBackground(new java.awt.Color(226, 249, 206));
-        T5APCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T5APCB.setText("Treino...");
+        T5APCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T5APCB.setText("Rosca direta");
         T5APCB.setFocusPainted(false);
         jPanel3.add(T5APCB);
-        T5APCB.setBounds(500, 260, 170, 70);
+        T5APCB.setBounds(500, 260, 350, 70);
 
         T1APCB.setBackground(new java.awt.Color(226, 249, 206));
-        T1APCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T1APCB.setText("Treino...");
+        T1APCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T1APCB.setText("Caminhada moderada (10min)");
         T1APCB.setFocusPainted(false);
         jPanel3.add(T1APCB);
-        T1APCB.setBounds(120, 110, 170, 70);
+        T1APCB.setBounds(120, 110, 350, 70);
 
         T4APCB.setBackground(new java.awt.Color(226, 249, 206));
-        T4APCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T4APCB.setText("Treino...");
+        T4APCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T4APCB.setText("Agachamento reto");
         T4APCB.setFocusPainted(false);
         jPanel3.add(T4APCB);
-        T4APCB.setBounds(500, 110, 170, 70);
+        T4APCB.setBounds(500, 110, 350, 70);
 
         T6APCB.setBackground(new java.awt.Color(226, 249, 206));
-        T6APCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T6APCB.setText("Treino...");
+        T6APCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T6APCB.setText("Elevação frontal");
         T6APCB.setFocusPainted(false);
         jPanel3.add(T6APCB);
-        T6APCB.setBounds(500, 400, 170, 70);
+        T6APCB.setBounds(500, 400, 350, 70);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
@@ -142,18 +142,18 @@ public class TrainingsAcimaPeso extends javax.swing.JFrame {
         jLabel7.setBounds(20, 20, 620, 55);
 
         T2APCB.setBackground(new java.awt.Color(226, 249, 206));
-        T2APCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T2APCB.setText("Treino...");
+        T2APCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T2APCB.setText("Corrida em ritmo (8min)");
         T2APCB.setFocusPainted(false);
         jPanel3.add(T2APCB);
-        T2APCB.setBounds(120, 260, 170, 70);
+        T2APCB.setBounds(120, 260, 350, 70);
 
         T3APCB.setBackground(new java.awt.Color(226, 249, 206));
-        T3APCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T3APCB.setText("Treino...");
+        T3APCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T3APCB.setText("Caminhada lenta (2min)");
         T3APCB.setFocusPainted(false);
         jPanel3.add(T3APCB);
-        T3APCB.setBounds(120, 400, 170, 70);
+        T3APCB.setBounds(120, 400, 350, 70);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

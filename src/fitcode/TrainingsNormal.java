@@ -62,32 +62,32 @@ public class TrainingsNormal extends javax.swing.JFrame {
         jLabel9.setBounds(20, 570, 430, 20);
 
         T5NOCB.setBackground(new java.awt.Color(226, 249, 206));
-        T5NOCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T5NOCB.setText("Treino...");
+        T5NOCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T5NOCB.setText("Mesa flexora");
         T5NOCB.setFocusPainted(false);
         jPanel3.add(T5NOCB);
-        T5NOCB.setBounds(500, 260, 170, 70);
+        T5NOCB.setBounds(500, 260, 240, 70);
 
         T1NOCB.setBackground(new java.awt.Color(226, 249, 206));
-        T1NOCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T1NOCB.setText("Treino...");
+        T1NOCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T1NOCB.setText("Supino inclinado + crucifixo");
         T1NOCB.setFocusPainted(false);
         jPanel3.add(T1NOCB);
-        T1NOCB.setBounds(120, 110, 170, 70);
+        T1NOCB.setBounds(120, 110, 350, 70);
 
         T4NOCB.setBackground(new java.awt.Color(226, 249, 206));
-        T4NOCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T4NOCB.setText("Treino...");
+        T4NOCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T4NOCB.setText("Trapézio barra");
         T4NOCB.setFocusPainted(false);
         jPanel3.add(T4NOCB);
-        T4NOCB.setBounds(500, 110, 170, 70);
+        T4NOCB.setBounds(500, 110, 280, 70);
 
         T6NOCB.setBackground(new java.awt.Color(226, 249, 206));
-        T6NOCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T6NOCB.setText("Treino...");
+        T6NOCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T6NOCB.setText("Panturrilha em pé");
         T6NOCB.setFocusPainted(false);
         jPanel3.add(T6NOCB);
-        T6NOCB.setBounds(500, 400, 170, 70);
+        T6NOCB.setBounds(500, 400, 330, 70);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
@@ -96,18 +96,18 @@ public class TrainingsNormal extends javax.swing.JFrame {
         jLabel7.setBounds(20, 20, 620, 55);
 
         T2NOCB.setBackground(new java.awt.Color(226, 249, 206));
-        T2NOCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T2NOCB.setText("Treino...");
+        T2NOCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T2NOCB.setText("Paralelas");
         T2NOCB.setFocusPainted(false);
         jPanel3.add(T2NOCB);
         T2NOCB.setBounds(120, 260, 170, 70);
 
         T3NOCB.setBackground(new java.awt.Color(226, 249, 206));
-        T3NOCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T3NOCB.setText("Treino...");
+        T3NOCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T3NOCB.setText("Antebraço");
         T3NOCB.setFocusPainted(false);
         jPanel3.add(T3NOCB);
-        T3NOCB.setBounds(120, 400, 170, 70);
+        T3NOCB.setBounds(120, 400, 230, 70);
 
         jPanel2.setBackground(new java.awt.Color(48, 165, 88));
 

@@ -108,32 +108,32 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         jLabel9.setBounds(20, 570, 430, 20);
 
         T5OBCB.setBackground(new java.awt.Color(226, 249, 206));
-        T5OBCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T5OBCB.setText("Treino...");
+        T5OBCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T5OBCB.setText("Leg press");
         T5OBCB.setFocusPainted(false);
         jPanel3.add(T5OBCB);
-        T5OBCB.setBounds(500, 260, 170, 70);
+        T5OBCB.setBounds(500, 260, 330, 70);
 
         T1OBCB.setBackground(new java.awt.Color(226, 249, 206));
-        T1OBCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T1OBCB.setText("Treino...");
+        T1OBCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T1OBCB.setText("Supino");
         T1OBCB.setFocusPainted(false);
         jPanel3.add(T1OBCB);
-        T1OBCB.setBounds(120, 110, 170, 70);
+        T1OBCB.setBounds(120, 110, 330, 70);
 
         T4OBCB.setBackground(new java.awt.Color(226, 249, 206));
-        T4OBCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T4OBCB.setText("Treino...");
+        T4OBCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T4OBCB.setText("Elevação lateral");
         T4OBCB.setFocusPainted(false);
         jPanel3.add(T4OBCB);
-        T4OBCB.setBounds(500, 110, 170, 70);
+        T4OBCB.setBounds(500, 110, 330, 70);
 
         T6OBCB.setBackground(new java.awt.Color(226, 249, 206));
-        T6OBCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T6OBCB.setText("Treino...");
+        T6OBCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T6OBCB.setText("Remada curvada");
         T6OBCB.setFocusPainted(false);
         jPanel3.add(T6OBCB);
-        T6OBCB.setBounds(500, 400, 170, 70);
+        T6OBCB.setBounds(500, 400, 330, 70);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
@@ -142,18 +142,18 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         jLabel7.setBounds(20, 20, 620, 55);
 
         T2OBCB.setBackground(new java.awt.Color(226, 249, 206));
-        T2OBCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T2OBCB.setText("Treino...");
+        T2OBCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T2OBCB.setText("Mesa flexora");
         T2OBCB.setFocusPainted(false);
         jPanel3.add(T2OBCB);
-        T2OBCB.setBounds(120, 260, 170, 70);
+        T2OBCB.setBounds(120, 260, 330, 70);
 
         T3OBCB.setBackground(new java.awt.Color(226, 249, 206));
-        T3OBCB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        T3OBCB.setText("Treino...");
+        T3OBCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        T3OBCB.setText("Agachamento reto");
         T3OBCB.setFocusPainted(false);
         jPanel3.add(T3OBCB);
-        T3OBCB.setBounds(120, 400, 170, 70);
+        T3OBCB.setBounds(120, 400, 330, 70);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

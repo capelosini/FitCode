@@ -35,9 +35,12 @@ public class AboutUs extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         BackToMenuBTN = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
 
         setTitle("Sobre nós");
         setResizable(false);
@@ -96,23 +99,43 @@ public class AboutUs extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(226, 249, 206));
         jPanel3.setLayout(null);
 
-        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel7.setText("Balela");
-        jPanel3.add(jLabel7);
-        jLabel7.setBounds(60, 150, 210, 55);
-
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
         jLabel8.setText("Objetivo do app");
         jPanel3.add(jLabel8);
-        jLabel8.setBounds(60, 380, 260, 55);
+        jLabel8.setBounds(60, 340, 260, 55);
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
         jLabel9.setText("Quem somos");
         jPanel3.add(jLabel9);
         jLabel9.setBounds(60, 100, 210, 55);
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(226, 249, 206));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText(" FitCode é um aplicativo de monitoramento de saúde e bem estar que tem o objetivo de tornar para seus usuários mais\n fácil a jornada de uma rotina saudável. Para isso contamos com algumas ferramentas\n como listas de exercícios, um histórico alimentar e um sistema de contagem do consumo diário de água do usuário, \n além de fornecer informações importantes para o usuário em sua auto análise corporal.\n\n Esse aplicativo foi desenvolvido pela empresa Code River em parceria com a Canes Solutions,\n com o intuito de melhorar as condições de vida de seus colaboradores e do público geral.\n Esperamos que esse aplicativo seja de bom uso para você e para demais pessoas que se juntam a nossa comunidade.\n Agradecemos a preferencia e desejamos uma boa experiência.");
+        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(48, 165, 88)));
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setDoubleBuffered(true);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel3.add(jScrollPane1);
+        jScrollPane1.setBounds(60, 400, 750, 210);
+
+        jTextArea2.setEditable(false);
+        jTextArea2.setBackground(new java.awt.Color(226, 249, 206));
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextArea2.setRows(5);
+        jTextArea2.setText(" A empresa Code River foi formada como uma startup com interesse em fornecer softwares modernos para \n solucionar os problemas de diversas áreas de trabalho.\n Contamos com os melhores desenvolvedores e nossos objetivos são sempre fornecer uma melhor experiência\n para o usuário, fornecendo atualizações regulares aos nossos programas.\n Atualmente estamos em crescimento e caso você queira saber mais sobre nós\n e nos apoiar acesse o site www.coderiverstatup.com.br");
+        jTextArea2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(48, 165, 88)));
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jPanel3.add(jScrollPane2);
+        jScrollPane2.setBounds(60, 160, 750, 140);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -181,10 +204,13 @@ public class AboutUs extends javax.swing.JFrame {
     private javax.swing.JButton BackToMenuBTN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
 }
