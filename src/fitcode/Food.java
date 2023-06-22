@@ -4,6 +4,9 @@
  */
 package fitcode;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author vzako
@@ -49,6 +52,11 @@ public class Food extends javax.swing.JFrame {
 
         setTitle("Alimentação");
         setResizable(false);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                formComponentHidden(evt);
+            }
+        });
 
         jPanel2.setBackground(new java.awt.Color(48, 165, 88));
 
@@ -114,28 +122,10 @@ public class Food extends javax.swing.JFrame {
         FDComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Segunda-feira", "Terça-Feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo" }));
         jPanel3.add(FDComboBox);
         FDComboBox.setBounds(30, 80, 130, 30);
-
-        FDjantarTXT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FDjantarTXTActionPerformed(evt);
-            }
-        });
         jPanel3.add(FDjantarTXT);
         FDjantarTXT.setBounds(30, 350, 200, 30);
-
-        FDcafemanhaTXT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FDcafemanhaTXTActionPerformed(evt);
-            }
-        });
         jPanel3.add(FDcafemanhaTXT);
         FDcafemanhaTXT.setBounds(30, 160, 200, 30);
-
-        FDalmocoTXT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FDalmocoTXTActionPerformed(evt);
-            }
-        });
         jPanel3.add(FDalmocoTXT);
         FDalmocoTXT.setBounds(30, 250, 200, 30);
 
@@ -149,45 +139,11 @@ public class Food extends javax.swing.JFrame {
             }
         });
         jPanel3.add(FDaddBTN);
-        FDaddBTN.setBounds(80, 400, 100, 26);
+        FDaddBTN.setBounds(80, 400, 100, 27);
 
         FDtabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Dia da semana", "Café da manhã", "Almoço", "Jantar"
@@ -237,25 +193,24 @@ public class Food extends javax.swing.JFrame {
 
     private void BackToMenuBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToMenuBTNActionPerformed
         // TODO add your handling code here:
-        new MainMenu(this.user).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_BackToMenuBTNActionPerformed
 
-    private void FDjantarTXTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FDjantarTXTActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_FDjantarTXTActionPerformed
-
-    private void FDcafemanhaTXTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FDcafemanhaTXTActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_FDcafemanhaTXTActionPerformed
-
-    private void FDalmocoTXTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FDalmocoTXTActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_FDalmocoTXTActionPerformed
-
     private void FDaddBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FDaddBTNActionPerformed
-        // TODO add your handling code here:
+        if (FDComboBox.getSelectedItem().toString().strip().equals("") || FDcafemanhaTXT.getText().toString().strip().equals("") || FDalmocoTXT.getText().toString().strip().equals("") || FDjantarTXT.getText().toString().strip().equals("")){
+            JOptionPane.showMessageDialog(null, "Por favor, coloque tudo o que comeu no dia!");
+            return;
+        }
+        DefaultTableModel model = (DefaultTableModel) FDtabela.getModel();
+        model.addRow(new Object[]{FDComboBox.getSelectedItem().toString().strip(), FDcafemanhaTXT.getText().toString().strip(), FDalmocoTXT.getText().toString().strip(), FDjantarTXT.getText().toString().strip()});
+        FDcafemanhaTXT.setText("");
+        FDalmocoTXT.setText("");
+        FDjantarTXT.setText("");
     }//GEN-LAST:event_FDaddBTNActionPerformed
+
+    private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden
+        new MainMenu(this.user).setVisible(true);
+    }//GEN-LAST:event_formComponentHidden
 
     /**
      * @param args the command line arguments

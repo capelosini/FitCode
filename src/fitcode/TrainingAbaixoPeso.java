@@ -43,7 +43,7 @@ public class TrainingAbaixoPeso extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         BackToTrainingsBTN = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Treino para abaixo do peso");
         setResizable(false);
 
@@ -183,8 +183,7 @@ public class TrainingAbaixoPeso extends javax.swing.JFrame {
 
     private void BackToTrainingsBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToTrainingsBTNActionPerformed
         // TODO add your handling code here:
-        new Trainings(this.user).setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_BackToTrainingsBTNActionPerformed
 
     /**

@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package fitcode;
-import java.awt.event.KeyEvent;
-import java.sql.*;
 import javax.swing.JOptionPane;
 
 public class LoginWindow extends javax.swing.JFrame {
@@ -159,13 +157,13 @@ public class LoginWindow extends javax.swing.JFrame {
 
     private void LoginBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBTNActionPerformed
         if (!EmailInput.getText().strip().equals("") && !PasswordInput.getText().strip().equals("")){
-            boolean isRealUser=db.checkUser(EmailInput.getText().strip(), PasswordInput.getText().strip());
+            boolean isRealUser=db.checkUser(EmailInput.getText().strip().toLowerCase(), PasswordInput.getText().strip());
             if(isRealUser){
                 System.out.println("Login Success!");
-                User user = db.getUser(EmailInput.getText().strip(), PasswordInput.getText().strip());
+                User user = db.getUser(EmailInput.getText().strip().toLowerCase(), PasswordInput.getText().strip());
                 db.closeConn();
                 new MainMenu(user).setVisible(true);
-                this.setVisible(false);
+                this.dispose();
             } else{
                 JOptionPane.showMessageDialog(null, "Confira se os dados estão corretos!");
                 System.out.println("Wrong Login!");

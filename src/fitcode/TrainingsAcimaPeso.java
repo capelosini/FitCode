@@ -42,7 +42,7 @@ public class TrainingsAcimaPeso extends javax.swing.JFrame {
         T2APCB = new javax.swing.JCheckBox();
         T3APCB = new javax.swing.JCheckBox();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Treino acima do peso");
         setResizable(false);
 
@@ -176,8 +176,7 @@ public class TrainingsAcimaPeso extends javax.swing.JFrame {
 
     private void BackToTrainingsBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToTrainingsBTNActionPerformed
         // TODO add your handling code here:
-        new Trainings(this.user).setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_BackToTrainingsBTNActionPerformed
 
     /**

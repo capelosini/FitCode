@@ -9,7 +9,10 @@ package fitcode;
  * @author vzako
  */
 public class AboutUs extends javax.swing.JFrame {
-            User user;
+    
+    
+    User user;
+    
     /**
      * Creates new form AboutUs
      */
@@ -38,6 +41,11 @@ public class AboutUs extends javax.swing.JFrame {
 
         setTitle("Sobre nós");
         setResizable(false);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                formComponentHidden(evt);
+            }
+        });
 
         jPanel2.setBackground(new java.awt.Color(48, 165, 88));
 
@@ -127,9 +135,12 @@ public class AboutUs extends javax.swing.JFrame {
 
     private void BackToMenuBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToMenuBTNActionPerformed
         // TODO add your handling code here:
-        new MainMenu(this.user).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_BackToMenuBTNActionPerformed
+
+    private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden
+        new MainMenu(this.user).setVisible(true);
+    }//GEN-LAST:event_formComponentHidden
 
     /**
      * @param args the command line arguments

@@ -26,7 +26,7 @@ public class YourInformation extends javax.swing.JFrame {
    void refreshInfo(){
        NameLabel.setText((String)this.user.get("name")+" "+(String)this.user.get("secondName"));
        HeightLabel.setText(Float.toString((float)this.user.get("height"))+"m");
-       WeightLabel.setText(Float.toString((float)this.user.get("weight"))+"Kg");
+       WeightLabel.setText(Integer.toString(Math.round((float)this.user.get("weight")))+"Kg");
        float imc = this.IMC((float)this.user.get("height"), (float)this.user.get("weight"));
        IMCNumberLabel.setText(Float.toString(imc));
        IMCStatusLabel.setText(IMCStatus(imc));
@@ -158,7 +158,6 @@ public class YourInformation extends javax.swing.JFrame {
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Suas informações");
         setLocation(new java.awt.Point(850, 0));
         setResizable(false);
@@ -224,31 +223,31 @@ public class YourInformation extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel3.setText("Nome:");
         jPanel3.add(jLabel3);
-        jLabel3.setBounds(33, 76, 50, 55);
+        jLabel3.setBounds(33, 76, 52, 55);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
         jLabel4.setText("Suas informações");
         jPanel3.add(jLabel4);
-        jLabel4.setBounds(30, 0, 283, 55);
+        jLabel4.setBounds(30, 0, 286, 55);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel6.setText("Peso:");
         jPanel3.add(jLabel6);
-        jLabel6.setBounds(193, 149, 44, 55);
+        jLabel6.setBounds(193, 149, 46, 55);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel7.setText("Altura:");
         jPanel3.add(jLabel7);
-        jLabel7.setBounds(33, 149, 54, 55);
+        jLabel7.setBounds(33, 149, 51, 55);
 
         WeightLabel.setBackground(new java.awt.Color(255, 255, 255));
         WeightLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         WeightLabel.setText("Name");
         jPanel3.add(WeightLabel);
-        WeightLabel.setBounds(249, 149, 60, 55);
+        WeightLabel.setBounds(249, 149, 80, 55);
 
         NameLabel.setBackground(new java.awt.Color(255, 255, 255));
         NameLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -260,7 +259,7 @@ public class YourInformation extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel10.setText("IMC:");
         jPanel3.add(jLabel10);
-        jLabel10.setBounds(260, 390, 35, 41);
+        jLabel10.setBounds(260, 390, 37, 41);
 
         IMCNumberLabel.setBackground(new java.awt.Color(255, 255, 255));
         IMCNumberLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -351,9 +350,9 @@ public class YourInformation extends javax.swing.JFrame {
             }
         });
         jPanel3.add(GOTOEditWindowBTN);
-        GOTOEditWindowBTN.setBounds(340, 160, 80, 26);
+        GOTOEditWindowBTN.setBounds(340, 160, 80, 27);
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\Pichau\\Documents\\NetBeansProjects\\FitCode\\imgs\\profileIMGyi.png")); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profileIMGyi.png"))); // NOI18N
         jPanel3.add(jLabel9);
         jLabel9.setBounds(540, 20, 240, 240);
 
@@ -388,7 +387,6 @@ public class YourInformation extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BackToMenuBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToMenuBTNActionPerformed
-        new MainMenu(this.user).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_BackToMenuBTNActionPerformed
 
@@ -405,6 +403,9 @@ public class YourInformation extends javax.swing.JFrame {
             try{
                 float height=Float.parseFloat(HeightInput.getText().strip());
                 float weight=Float.parseFloat(WeightInput.getText().strip());
+                if (height >=100){
+                    height=(float)height/100;
+                }
                 DB db = new DB();
                 db.connectDB();
                 db.updateIMCUser((String)this.user.get("email"), height, weight);
@@ -420,6 +421,7 @@ public class YourInformation extends javax.swing.JFrame {
     }//GEN-LAST:event_EditBTNActionPerformed
 
     private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden
+        new MainMenu(this.user).setVisible(true);
         EditWindow.setVisible(false);
     }//GEN-LAST:event_formComponentHidden
 

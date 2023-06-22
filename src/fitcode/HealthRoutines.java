@@ -4,6 +4,9 @@
  */
 package fitcode;
 
+import javax.swing.JCheckBox;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author vzako
@@ -32,7 +35,7 @@ public class HealthRoutines extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         A7CB = new javax.swing.JCheckBox();
-        AguaPGB = new javax.swing.JProgressBar();
+        WaterBar = new javax.swing.JProgressBar();
         NameLabel = new javax.swing.JLabel();
         A1CB = new javax.swing.JCheckBox();
         A2CB = new javax.swing.JCheckBox();
@@ -47,6 +50,11 @@ public class HealthRoutines extends javax.swing.JFrame {
 
         setTitle("Controle de líquido");
         setResizable(false);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                formComponentHidden(evt);
+            }
+        });
 
         jPanel3.setBackground(new java.awt.Color(226, 249, 206));
         jPanel3.setLayout(null);
@@ -63,13 +71,15 @@ public class HealthRoutines extends javax.swing.JFrame {
         A7CB.setFocusPainted(false);
         A7CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A7CBActionPerformed(evt);
+                CBClick(evt);
             }
         });
         jPanel3.add(A7CB);
-        A7CB.setBounds(350, 510, 170, 70);
-        jPanel3.add(AguaPGB);
-        AguaPGB.setBounds(126, 150, 600, 40);
+        A7CB.setBounds(350, 510, 210, 70);
+
+        WaterBar.setMaximum(70);
+        jPanel3.add(WaterBar);
+        WaterBar.setBounds(126, 150, 600, 40);
 
         NameLabel.setBackground(new java.awt.Color(255, 255, 255));
         NameLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -83,11 +93,11 @@ public class HealthRoutines extends javax.swing.JFrame {
         A1CB.setFocusPainted(false);
         A1CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A1CBActionPerformed(evt);
+                CBClick(evt);
             }
         });
         jPanel3.add(A1CB);
-        A1CB.setBounds(80, 270, 170, 70);
+        A1CB.setBounds(80, 270, 240, 70);
 
         A2CB.setBackground(new java.awt.Color(226, 249, 206));
         A2CB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -95,11 +105,11 @@ public class HealthRoutines extends javax.swing.JFrame {
         A2CB.setFocusPainted(false);
         A2CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A2CBActionPerformed(evt);
+                CBClick(evt);
             }
         });
         jPanel3.add(A2CB);
-        A2CB.setBounds(350, 270, 170, 70);
+        A2CB.setBounds(350, 270, 220, 70);
 
         A3CB.setBackground(new java.awt.Color(226, 249, 206));
         A3CB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -107,11 +117,11 @@ public class HealthRoutines extends javax.swing.JFrame {
         A3CB.setFocusPainted(false);
         A3CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A3CBActionPerformed(evt);
+                CBClick(evt);
             }
         });
         jPanel3.add(A3CB);
-        A3CB.setBounds(620, 270, 170, 70);
+        A3CB.setBounds(620, 270, 200, 70);
 
         A6CB.setBackground(new java.awt.Color(226, 249, 206));
         A6CB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -119,11 +129,11 @@ public class HealthRoutines extends javax.swing.JFrame {
         A6CB.setFocusPainted(false);
         A6CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A6CBActionPerformed(evt);
+                CBClick(evt);
             }
         });
         jPanel3.add(A6CB);
-        A6CB.setBounds(620, 390, 170, 70);
+        A6CB.setBounds(620, 390, 200, 70);
 
         A5CB.setBackground(new java.awt.Color(226, 249, 206));
         A5CB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -131,11 +141,11 @@ public class HealthRoutines extends javax.swing.JFrame {
         A5CB.setFocusPainted(false);
         A5CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A5CBActionPerformed(evt);
+                CBClick(evt);
             }
         });
         jPanel3.add(A5CB);
-        A5CB.setBounds(350, 390, 170, 70);
+        A5CB.setBounds(350, 390, 210, 70);
 
         A4CB.setBackground(new java.awt.Color(226, 249, 206));
         A4CB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -143,11 +153,11 @@ public class HealthRoutines extends javax.swing.JFrame {
         A4CB.setFocusPainted(false);
         A4CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A4CBActionPerformed(evt);
+                CBClick(evt);
             }
         });
         jPanel3.add(A4CB);
-        A4CB.setBounds(80, 390, 170, 70);
+        A4CB.setBounds(80, 390, 230, 70);
 
         jPanel2.setBackground(new java.awt.Color(48, 165, 88));
 
@@ -216,37 +226,24 @@ public class HealthRoutines extends javax.swing.JFrame {
 
     private void BackToMenuBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToMenuBTNActionPerformed
         // TODO add your handling code here:
-        new MainMenu(this.user).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_BackToMenuBTNActionPerformed
 
-    private void A7CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A7CBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_A7CBActionPerformed
+    private void CBClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBClick
+        if(((JCheckBox)evt.getSource()).isSelected()){
+            WaterBar.setValue(WaterBar.getValue()+10);
+        } else{
+            WaterBar.setValue(WaterBar.getValue()-10);
+        }
+        
+        if (WaterBar.getValue() >= WaterBar.getMaximum()){
+            JOptionPane.showMessageDialog(null, "Parabéns, você atingiu o objetivo diário de consumo de água!");
+        }
+    }//GEN-LAST:event_CBClick
 
-    private void A1CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A1CBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_A1CBActionPerformed
-
-    private void A2CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A2CBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_A2CBActionPerformed
-
-    private void A3CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A3CBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_A3CBActionPerformed
-
-    private void A6CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A6CBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_A6CBActionPerformed
-
-    private void A5CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A5CBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_A5CBActionPerformed
-
-    private void A4CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A4CBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_A4CBActionPerformed
+    private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden
+        new MainMenu(this.user).setVisible(true);
+    }//GEN-LAST:event_formComponentHidden
 
     /**
      * @param args the command line arguments
@@ -291,9 +288,9 @@ public class HealthRoutines extends javax.swing.JFrame {
     private javax.swing.JCheckBox A5CB;
     private javax.swing.JCheckBox A6CB;
     private javax.swing.JCheckBox A7CB;
-    private javax.swing.JProgressBar AguaPGB;
     private javax.swing.JButton BackToMenuBTN;
     private javax.swing.JLabel NameLabel;
+    private javax.swing.JProgressBar WaterBar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel6;

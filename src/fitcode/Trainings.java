@@ -50,6 +50,11 @@ public class Trainings extends javax.swing.JFrame {
         setTitle("Treinos");
         setResizable(false);
         setSize(new java.awt.Dimension(0, 0));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                windowOnClose(evt);
+            }
+        });
 
         jPanel2.setBackground(new java.awt.Color(48, 165, 88));
 
@@ -218,26 +223,26 @@ public class Trainings extends javax.swing.JFrame {
     private void TobsesoBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TobsesoBTNActionPerformed
         // TODO add your handling code here:
         new TrainingsObesidade(this.user).setVisible(true);
-        this.setVisible(false);
     }//GEN-LAST:event_TobsesoBTNActionPerformed
 
     private void TabaixopesoBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TabaixopesoBTNActionPerformed
         // TODO add your handling code here:
         new TrainingAbaixoPeso(this.user).setVisible(true);
-        this.setVisible(false);
     }//GEN-LAST:event_TabaixopesoBTNActionPerformed
 
     private void TnormalBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TnormalBTNActionPerformed
         // TODO add your handling code here:
         new TrainingsNormal(this.user).setVisible(true);
-        this.setVisible(false);
     }//GEN-LAST:event_TnormalBTNActionPerformed
 
     private void TacimapesoBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TacimapesoBTNActionPerformed
         // TODO add your handling code here:
         new TrainingsAcimaPeso(this.user).setVisible(true);
-        this.setVisible(false);
     }//GEN-LAST:event_TacimapesoBTNActionPerformed
+
+    private void windowOnClose(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_windowOnClose
+        new MainMenu(this.user).setVisible(true);
+    }//GEN-LAST:event_windowOnClose
 
     /**
      * @param args the command line arguments

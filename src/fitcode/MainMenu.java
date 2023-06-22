@@ -4,6 +4,8 @@
  */
 package fitcode;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author gustavo.oandrade1
@@ -32,6 +34,7 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         userNameLabel = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        ExitBTN = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         GOTOYourInformation = new javax.swing.JButton();
         GOTOTrainingBTN = new javax.swing.JButton();
@@ -60,20 +63,37 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Pichau\\Documents\\NetBeansProjects\\FitCode\\imgs\\profileIMG.png")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profileIMG.png"))); // NOI18N
+
+        ExitBTN.setBackground(new java.awt.Color(226, 249, 206));
+        ExitBTN.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        ExitBTN.setText("Sair");
+        ExitBTN.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ExitBTN.setFocusPainted(false);
+        ExitBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitBTNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(312, Short.MAX_VALUE)
+                .addContainerGap(315, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(176, 176, 176)
-                .addComponent(userNameLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(173, 173, 173)
+                        .addComponent(userNameLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ExitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)))
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31))
         );
@@ -84,14 +104,13 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(userNameLabel)
-                        .addGap(23, 23, 23))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap())))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ExitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
 
         jPanel2.setBackground(new java.awt.Color(226, 249, 206));
@@ -99,7 +118,6 @@ public class MainMenu extends javax.swing.JFrame {
         GOTOYourInformation.setBackground(new java.awt.Color(48, 165, 88));
         GOTOYourInformation.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         GOTOYourInformation.setText("Suas informações");
-        GOTOYourInformation.setBorderPainted(false);
         GOTOYourInformation.setFocusPainted(false);
         GOTOYourInformation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,25 +232,37 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void GOTOTrainingBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GOTOTrainingBTNActionPerformed
         new Trainings(this.user).setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_GOTOTrainingBTNActionPerformed
 
     private void GOTOAboutUsBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GOTOAboutUsBTNActionPerformed
         new AboutUs(this.user).setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_GOTOAboutUsBTNActionPerformed
 
     private void GOTOYourInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GOTOYourInformationActionPerformed
         // TODO add your handling code here:
         new YourInformation(this.user).setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_GOTOYourInformationActionPerformed
 
     private void GOTOFoodBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GOTOFoodBTNActionPerformed
         new Food(this.user).setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_GOTOFoodBTNActionPerformed
 
     private void GOTOHealthRoutinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GOTOHealthRoutinesActionPerformed
         new HealthRoutines(this.user).setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_GOTOHealthRoutinesActionPerformed
+
+    private void ExitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBTNActionPerformed
+        int resp = JOptionPane.showConfirmDialog(null, "Você tem certeza que quer sair da sua conta?");
+        if (resp == JOptionPane.YES_OPTION){
+            new LoginWindow().setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_ExitBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -271,6 +301,7 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ExitBTN;
     private javax.swing.JButton GOTOAboutUsBTN;
     private javax.swing.JButton GOTOFoodBTN;
     private javax.swing.JButton GOTOHealthRoutines;

@@ -5,7 +5,6 @@
 package fitcode;
 
 import javax.swing.JOptionPane;
-import java.sql.*;
 
 /**
  *
@@ -54,7 +53,7 @@ public class RegisterWindow extends javax.swing.JFrame {
         RegisterIMCWindow.setTitle("Registrar");
         RegisterIMCWindow.setLocation(new java.awt.Point(500, 250));
         RegisterIMCWindow.setResizable(false);
-        RegisterIMCWindow.setSize(new java.awt.Dimension(488, 219));
+        RegisterIMCWindow.setSize(new java.awt.Dimension(374, 300));
 
         BackBTN.setText("Voltar");
         BackBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -79,40 +78,38 @@ public class RegisterWindow extends javax.swing.JFrame {
         RegisterIMCWindowLayout.setHorizontalGroup(
             RegisterIMCWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RegisterIMCWindowLayout.createSequentialGroup()
-                .addGap(153, 153, 153)
-                .addGroup(RegisterIMCWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(RegisterIMCWindowLayout.createSequentialGroup()
-                        .addGroup(RegisterIMCWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel7)
-                            .addComponent(WeightInput, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(91, 91, 91)
-                        .addGroup(RegisterIMCWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(HeightInput, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)))
+                .addGap(68, 68, 68)
+                .addGroup(RegisterIMCWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(RegisterIMCWindowLayout.createSequentialGroup()
                         .addComponent(BackBTN)
-                        .addGap(48, 48, 48)
-                        .addComponent(RegisterBTN)))
-                .addGap(0, 140, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                        .addComponent(RegisterBTN))
+                    .addGroup(RegisterIMCWindowLayout.createSequentialGroup()
+                        .addGroup(RegisterIMCWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(HeightInput, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(RegisterIMCWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(WeightInput, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(68, 68, 68))
         );
         RegisterIMCWindowLayout.setVerticalGroup(
             RegisterIMCWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RegisterIMCWindowLayout.createSequentialGroup()
                 .addGap(69, 69, 69)
                 .addGroup(RegisterIMCWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(RegisterIMCWindowLayout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(WeightInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(RegisterIMCWindowLayout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(HeightInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7))
+                .addGap(6, 6, 6)
+                .addGroup(RegisterIMCWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(HeightInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(WeightInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                 .addGroup(RegisterIMCWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BackBTN)
                     .addComponent(RegisterBTN))
-                .addContainerGap())
+                .addGap(35, 35, 35))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -232,7 +229,7 @@ public class RegisterWindow extends javax.swing.JFrame {
 
     private void GOTOLoginBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GOTOLoginBTNActionPerformed
         new LoginWindow().setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_GOTOLoginBTNActionPerformed
 
     private void ShowPasswordBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowPasswordBoxActionPerformed
@@ -262,11 +259,14 @@ public class RegisterWindow extends javax.swing.JFrame {
             try{
                 float height=Float.parseFloat(HeightInput.getText().strip());
                 float weight=Float.parseFloat(WeightInput.getText().strip());
-                this.db.addUser(FirstNameInput.getText().strip(), SecondNameInput.getText().strip(), EmailInput.getText().strip(), height, weight, PasswordInput.getText().strip());
+                if (height >=100){
+                    height=(float)height/100;
+                }
+                this.db.addUser(FirstNameInput.getText().strip(), SecondNameInput.getText().strip(), EmailInput.getText().strip().toLowerCase(), height, weight, PasswordInput.getText().strip());
                 this.db.closeConn();
                 new LoginWindow().setVisible(true);
-                this.setVisible(false);
-                RegisterIMCWindow.setVisible(false);
+                this.dispose();
+                RegisterIMCWindow.dispose();
             } catch(Exception e){
                 JOptionPane.showMessageDialog(null, "Confira suas respostas!");
             }
