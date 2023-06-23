@@ -103,13 +103,13 @@ public class AboutUs extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
         jLabel8.setText("Objetivo do app");
         jPanel3.add(jLabel8);
-        jLabel8.setBounds(60, 340, 260, 55);
+        jLabel8.setBounds(60, 340, 340, 55);
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
         jLabel9.setText("Quem somos");
         jPanel3.add(jLabel9);
-        jLabel9.setBounds(60, 100, 210, 55);
+        jLabel9.setBounds(60, 100, 280, 55);
 
         jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(226, 249, 206));

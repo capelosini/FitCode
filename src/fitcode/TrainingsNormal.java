@@ -4,12 +4,16 @@
  */
 package fitcode;
 
+import javax.swing.JCheckBox;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Gustavo
  */
 public class TrainingsNormal extends javax.swing.JFrame {
-            User user;
+    User user;
+    int cbTotal;
     /**
      * Creates new form TrainingsNormal
      */
@@ -65,6 +69,11 @@ public class TrainingsNormal extends javax.swing.JFrame {
         T5NOCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T5NOCB.setText("Mesa flexora");
         T5NOCB.setFocusPainted(false);
+        T5NOCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T5NOCB);
         T5NOCB.setBounds(500, 260, 240, 70);
 
@@ -72,6 +81,11 @@ public class TrainingsNormal extends javax.swing.JFrame {
         T1NOCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T1NOCB.setText("Supino inclinado + crucifixo");
         T1NOCB.setFocusPainted(false);
+        T1NOCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T1NOCB);
         T1NOCB.setBounds(120, 110, 350, 70);
 
@@ -79,6 +93,11 @@ public class TrainingsNormal extends javax.swing.JFrame {
         T4NOCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T4NOCB.setText("Trapézio barra");
         T4NOCB.setFocusPainted(false);
+        T4NOCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T4NOCB);
         T4NOCB.setBounds(500, 110, 280, 70);
 
@@ -86,6 +105,11 @@ public class TrainingsNormal extends javax.swing.JFrame {
         T6NOCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T6NOCB.setText("Panturrilha em pé");
         T6NOCB.setFocusPainted(false);
+        T6NOCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T6NOCB);
         T6NOCB.setBounds(500, 400, 330, 70);
 
@@ -99,6 +123,11 @@ public class TrainingsNormal extends javax.swing.JFrame {
         T2NOCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T2NOCB.setText("Paralelas");
         T2NOCB.setFocusPainted(false);
+        T2NOCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T2NOCB);
         T2NOCB.setBounds(120, 260, 170, 70);
 
@@ -106,6 +135,11 @@ public class TrainingsNormal extends javax.swing.JFrame {
         T3NOCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T3NOCB.setText("Antebraço");
         T3NOCB.setFocusPainted(false);
+        T3NOCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T3NOCB);
         T3NOCB.setBounds(120, 400, 230, 70);
 
@@ -178,6 +212,17 @@ public class TrainingsNormal extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_BackToTrainingsBTNActionPerformed
+
+    private void cbClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbClick
+        if(((JCheckBox)evt.getSource()).isSelected()){
+            this.cbTotal+=1;
+        } else{
+            this.cbTotal-=1;
+        }
+        if (this.cbTotal == 6){
+            JOptionPane.showMessageDialog(null, "Parabéns, você concluiu seu treino diário!");
+        }
+    }//GEN-LAST:event_cbClick
 
     /**
      * @param args the command line arguments

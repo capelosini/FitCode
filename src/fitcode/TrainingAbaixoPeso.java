@@ -4,12 +4,16 @@
  */
 package fitcode;
 
+import javax.swing.JCheckBox;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Gustavo
  */
 public class TrainingAbaixoPeso extends javax.swing.JFrame {
-            User user;
+    User user;
+    int cbTotal;
     /**
      * Creates new form TrainingAbaixoPeso
      */
@@ -72,6 +76,11 @@ public class TrainingAbaixoPeso extends javax.swing.JFrame {
         T5BPCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T5BPCB.setText("Agachamento livre");
         T5BPCB.setFocusPainted(false);
+        T5BPCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T5BPCB);
         T5BPCB.setBounds(500, 260, 320, 70);
 
@@ -79,6 +88,11 @@ public class TrainingAbaixoPeso extends javax.swing.JFrame {
         T1BPCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T1BPCB.setText("Supino reto");
         T1BPCB.setFocusPainted(false);
+        T1BPCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T1BPCB);
         T1BPCB.setBounds(120, 110, 240, 70);
 
@@ -86,6 +100,11 @@ public class TrainingAbaixoPeso extends javax.swing.JFrame {
         T4BPCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T4BPCB.setText("Puxada na polia");
         T4BPCB.setFocusPainted(false);
+        T4BPCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T4BPCB);
         T4BPCB.setBounds(500, 110, 290, 70);
 
@@ -93,6 +112,11 @@ public class TrainingAbaixoPeso extends javax.swing.JFrame {
         T6BPCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T6BPCB.setText("Leg press");
         T6BPCB.setFocusPainted(false);
+        T6BPCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T6BPCB);
         T6BPCB.setBounds(500, 400, 210, 70);
 
@@ -106,6 +130,11 @@ public class TrainingAbaixoPeso extends javax.swing.JFrame {
         T2BPCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T2BPCB.setText("Levantamento lateral");
         T2BPCB.setFocusPainted(false);
+        T2BPCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T2BPCB);
         T2BPCB.setBounds(120, 260, 370, 70);
 
@@ -113,6 +142,11 @@ public class TrainingAbaixoPeso extends javax.swing.JFrame {
         T3BPCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T3BPCB.setText("Remada curvada");
         T3BPCB.setFocusPainted(false);
+        T3BPCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T3BPCB);
         T3BPCB.setBounds(120, 400, 300, 70);
 
@@ -185,6 +219,17 @@ public class TrainingAbaixoPeso extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_BackToTrainingsBTNActionPerformed
+
+    private void cbClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbClick
+        if(((JCheckBox)evt.getSource()).isSelected()){
+            this.cbTotal+=1;
+        } else{
+            this.cbTotal-=1;
+        }
+        if (this.cbTotal >= 6){
+            JOptionPane.showMessageDialog(null, "Parabéns, você concluiu seu treino diário!");
+        }
+    }//GEN-LAST:event_cbClick
 
     /**
      * @param args the command line arguments

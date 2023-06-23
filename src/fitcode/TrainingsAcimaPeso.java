@@ -4,12 +4,17 @@
  */
 package fitcode;
 
+import javax.swing.JCheckBox;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Gustavo
  */
 public class TrainingsAcimaPeso extends javax.swing.JFrame {
-            User user;
+    User user;
+    int cbTotal;
+    
     /**
      * Creates new form TrainingsAcimaPeso
      */
@@ -111,6 +116,11 @@ public class TrainingsAcimaPeso extends javax.swing.JFrame {
         T5APCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T5APCB.setText("Rosca direta");
         T5APCB.setFocusPainted(false);
+        T5APCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T5APCB);
         T5APCB.setBounds(500, 260, 350, 70);
 
@@ -118,6 +128,11 @@ public class TrainingsAcimaPeso extends javax.swing.JFrame {
         T1APCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T1APCB.setText("Caminhada moderada (10min)");
         T1APCB.setFocusPainted(false);
+        T1APCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T1APCB);
         T1APCB.setBounds(120, 110, 350, 70);
 
@@ -125,6 +140,11 @@ public class TrainingsAcimaPeso extends javax.swing.JFrame {
         T4APCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T4APCB.setText("Agachamento reto");
         T4APCB.setFocusPainted(false);
+        T4APCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T4APCB);
         T4APCB.setBounds(500, 110, 350, 70);
 
@@ -132,6 +152,11 @@ public class TrainingsAcimaPeso extends javax.swing.JFrame {
         T6APCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T6APCB.setText("Elevação frontal");
         T6APCB.setFocusPainted(false);
+        T6APCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T6APCB);
         T6APCB.setBounds(500, 400, 350, 70);
 
@@ -145,6 +170,11 @@ public class TrainingsAcimaPeso extends javax.swing.JFrame {
         T2APCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T2APCB.setText("Corrida em ritmo (8min)");
         T2APCB.setFocusPainted(false);
+        T2APCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T2APCB);
         T2APCB.setBounds(120, 260, 350, 70);
 
@@ -152,6 +182,11 @@ public class TrainingsAcimaPeso extends javax.swing.JFrame {
         T3APCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T3APCB.setText("Caminhada lenta (2min)");
         T3APCB.setFocusPainted(false);
+        T3APCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T3APCB);
         T3APCB.setBounds(120, 400, 350, 70);
 
@@ -178,6 +213,17 @@ public class TrainingsAcimaPeso extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_BackToTrainingsBTNActionPerformed
+
+    private void cbClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbClick
+        if(((JCheckBox)evt.getSource()).isSelected()){
+            this.cbTotal+=1;
+        } else{
+            this.cbTotal-=1;
+        }
+        if (this.cbTotal >= 6){
+            JOptionPane.showMessageDialog(null, "Parabéns, você concluiu seu treino diário!");
+        }
+    }//GEN-LAST:event_cbClick
 
     /**
      * @param args the command line arguments

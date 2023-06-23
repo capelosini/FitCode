@@ -4,12 +4,16 @@
  */
 package fitcode;
 
+import javax.swing.JCheckBox;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Gustavo
  */
 public class TrainingsObesidade extends javax.swing.JFrame {
-            User user;
+    User user;
+    int cbTotal;
     /**
      * Creates new form TrainingsObesidade
      */
@@ -111,6 +115,11 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         T5OBCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T5OBCB.setText("Leg press");
         T5OBCB.setFocusPainted(false);
+        T5OBCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T5OBCB);
         T5OBCB.setBounds(500, 260, 330, 70);
 
@@ -118,6 +127,11 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         T1OBCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T1OBCB.setText("Supino");
         T1OBCB.setFocusPainted(false);
+        T1OBCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T1OBCB);
         T1OBCB.setBounds(120, 110, 330, 70);
 
@@ -125,6 +139,11 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         T4OBCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T4OBCB.setText("Elevação lateral");
         T4OBCB.setFocusPainted(false);
+        T4OBCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T4OBCB);
         T4OBCB.setBounds(500, 110, 330, 70);
 
@@ -132,6 +151,11 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         T6OBCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T6OBCB.setText("Remada curvada");
         T6OBCB.setFocusPainted(false);
+        T6OBCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T6OBCB);
         T6OBCB.setBounds(500, 400, 330, 70);
 
@@ -145,6 +169,11 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         T2OBCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T2OBCB.setText("Mesa flexora");
         T2OBCB.setFocusPainted(false);
+        T2OBCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T2OBCB);
         T2OBCB.setBounds(120, 260, 330, 70);
 
@@ -152,6 +181,11 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         T3OBCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         T3OBCB.setText("Agachamento reto");
         T3OBCB.setFocusPainted(false);
+        T3OBCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbClick(evt);
+            }
+        });
         jPanel3.add(T3OBCB);
         T3OBCB.setBounds(120, 400, 330, 70);
 
@@ -178,6 +212,17 @@ public class TrainingsObesidade extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_BackToTrainingsBTNActionPerformed
+
+    private void cbClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbClick
+        if(((JCheckBox)evt.getSource()).isSelected()){
+            this.cbTotal+=1;
+        } else{
+            this.cbTotal-=1;
+        }
+        if (this.cbTotal == 6){
+            JOptionPane.showMessageDialog(null, "Parabéns, você concluiu seu treino diário!");
+        }
+    }//GEN-LAST:event_cbClick
 
     /**
      * @param args the command line arguments
