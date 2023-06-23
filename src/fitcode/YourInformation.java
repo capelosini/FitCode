@@ -4,6 +4,8 @@
  */
 package fitcode;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -21,6 +23,10 @@ public class YourInformation extends javax.swing.JFrame {
         initComponents();
         this.user=user;
         this.refreshInfo();
+        
+        Image icon = new ImageIcon(this.getClass().getResource("../images/logo.png")).getImage();
+        this.setIconImage(icon);
+        EditWindow.setIconImage(icon);
     }
     
    void refreshInfo(){
@@ -223,19 +229,19 @@ public class YourInformation extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel3.setText("Nome:");
         jPanel3.add(jLabel3);
-        jLabel3.setBounds(33, 76, 50, 55);
+        jLabel3.setBounds(33, 76, 60, 55);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
         jLabel4.setText("Suas informações");
         jPanel3.add(jLabel4);
-        jLabel4.setBounds(30, 0, 283, 55);
+        jLabel4.setBounds(30, 0, 286, 55);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel6.setText("Peso:");
         jPanel3.add(jLabel6);
-        jLabel6.setBounds(193, 149, 44, 55);
+        jLabel6.setBounds(190, 150, 60, 55);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
@@ -259,7 +265,7 @@ public class YourInformation extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel10.setText("IMC:");
         jPanel3.add(jLabel10);
-        jLabel10.setBounds(260, 390, 35, 41);
+        jLabel10.setBounds(260, 390, 60, 41);
 
         IMCNumberLabel.setBackground(new java.awt.Color(255, 255, 255));
         IMCNumberLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -326,7 +332,7 @@ public class YourInformation extends javax.swing.JFrame {
         jLabel19.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel19.setText("Status:");
         jPanel3.add(jLabel19);
-        jLabel19.setBounds(450, 390, 56, 41);
+        jLabel19.setBounds(450, 390, 80, 41);
 
         IMCStatusLabel.setBackground(new java.awt.Color(255, 255, 255));
         IMCStatusLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -338,7 +344,7 @@ public class YourInformation extends javax.swing.JFrame {
         HeightLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         HeightLabel.setText("Name");
         jPanel3.add(HeightLabel);
-        HeightLabel.setBounds(110, 150, 70, 55);
+        HeightLabel.setBounds(100, 150, 70, 55);
 
         GOTOEditWindowBTN.setBackground(new java.awt.Color(48, 165, 88));
         GOTOEditWindowBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -350,7 +356,7 @@ public class YourInformation extends javax.swing.JFrame {
             }
         });
         jPanel3.add(GOTOEditWindowBTN);
-        GOTOEditWindowBTN.setBounds(340, 160, 80, 26);
+        GOTOEditWindowBTN.setBounds(340, 160, 80, 27);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profileIMGyi.png"))); // NOI18N
         jPanel3.add(jLabel9);

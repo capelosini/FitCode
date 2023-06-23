@@ -4,6 +4,8 @@
  */
 package fitcode;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 
@@ -21,6 +23,9 @@ public class TrainingsAcimaPeso extends javax.swing.JFrame {
     public TrainingsAcimaPeso(User user) {
         initComponents();
         this.user=user;
+        
+        Image icon = new ImageIcon(this.getClass().getResource("../images/logo.png")).getImage();
+        this.setIconImage(icon);
     }
 
     /**

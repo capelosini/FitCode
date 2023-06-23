@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package fitcode;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class LoginWindow extends javax.swing.JFrame {
@@ -13,6 +15,9 @@ public class LoginWindow extends javax.swing.JFrame {
         initComponents();
         this.db = new DB();
         this.db.connectDB();
+        
+        Image icon = new ImageIcon(this.getClass().getResource("../images/logo.png")).getImage();
+        this.setIconImage(icon);
     }
 
     /**

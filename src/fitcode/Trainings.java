@@ -4,6 +4,9 @@
  */
 package fitcode;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author vzako
@@ -19,6 +22,9 @@ public class Trainings extends javax.swing.JFrame {
     public Trainings(User user) {
         initComponents();
         this.user=user;
+        
+        Image icon = new ImageIcon(this.getClass().getResource("../images/logo.png")).getImage();
+        this.setIconImage(icon);
     }
 
     /**

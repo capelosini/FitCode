@@ -4,6 +4,8 @@
  */
 package fitcode;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -21,6 +23,9 @@ public class Food extends javax.swing.JFrame {
     public Food(User user) {
         initComponents();
         this.user=user;
+        
+        Image icon = new ImageIcon(this.getClass().getResource("../images/logo.png")).getImage();
+        this.setIconImage(icon);
     }
 
     /**

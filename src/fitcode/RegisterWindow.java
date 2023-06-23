@@ -4,6 +4,8 @@
  */
 package fitcode;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -22,6 +24,10 @@ public class RegisterWindow extends javax.swing.JFrame {
         DB db = new DB();
         db.connectDB();
         this.db=db;
+        
+        Image icon = new ImageIcon(this.getClass().getResource("../images/logo.png")).getImage();
+        this.setIconImage(icon);
+        RegisterIMCWindow.setIconImage(icon);
     }
 
     
