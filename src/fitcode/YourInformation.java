@@ -37,10 +37,16 @@ public class YourInformation extends javax.swing.JFrame {
        IMCNumberLabel.setText(Float.toString(imc));
        IMCStatusLabel.setText(IMCStatus(imc));
        IMCBar.setValue(Math.round(imc));
+       float agua = this.aguaDiaria((float)this.user.get("weight"));
+       WaterLabel.setText(Float.toString(agua)+"ml");
    }
    
    float IMC(float h, float w){
        return w/(h*h);
+   }
+   
+   float aguaDiaria(float w){
+       return w*35;
    }
    
    String IMCStatus(float imc){
@@ -96,6 +102,8 @@ public class YourInformation extends javax.swing.JFrame {
         HeightLabel = new javax.swing.JLabel();
         GOTOEditWindowBTN = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        WaterLabel = new javax.swing.JLabel();
 
         EditWindow.setTitle("Editar");
         EditWindow.setLocation(new java.awt.Point(500, 250));
@@ -235,7 +243,7 @@ public class YourInformation extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Britannic Bold", 0, 36)); // NOI18N
         jLabel4.setText("Suas informações");
         jPanel3.add(jLabel4);
-        jLabel4.setBounds(30, 0, 286, 55);
+        jLabel4.setBounds(30, 0, 283, 55);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
@@ -356,11 +364,21 @@ public class YourInformation extends javax.swing.JFrame {
             }
         });
         jPanel3.add(GOTOEditWindowBTN);
-        GOTOEditWindowBTN.setBounds(340, 160, 80, 27);
+        GOTOEditWindowBTN.setBounds(340, 160, 80, 26);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profileIMGyi.png"))); // NOI18N
         jPanel3.add(jLabel9);
         jLabel9.setBounds(540, 20, 240, 240);
+
+        jLabel11.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
+        jLabel11.setText("Quantidade diária de água:");
+        jPanel3.add(jLabel11);
+        jLabel11.setBounds(30, 250, 240, 18);
+
+        WaterLabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        WaterLabel.setText("Name");
+        jPanel3.add(WaterLabel);
+        WaterLabel.setBounds(270, 250, 100, 25);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -477,10 +495,12 @@ public class YourInformation extends javax.swing.JFrame {
     private javax.swing.JLabel IMCNumberLabel;
     private javax.swing.JLabel IMCStatusLabel;
     private javax.swing.JLabel NameLabel;
+    private javax.swing.JLabel WaterLabel;
     private javax.swing.JTextField WeightInput;
     private javax.swing.JLabel WeightLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
