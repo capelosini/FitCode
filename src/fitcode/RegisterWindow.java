@@ -259,7 +259,7 @@ public class RegisterWindow extends javax.swing.JFrame {
     private void RegisterBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterBTNActionPerformed
         if(EmailInput.getText().strip().equals("") || PasswordInput.getText().strip().equals("") || FirstNameInput.getText().strip().equals("") || SecondNameInput.getText().strip().equals("") || HeightInput.getText().strip().equals("") || WeightInput.getText().strip().equals("")){
             JOptionPane.showMessageDialog(null, "Confira suas respostas!");
-        } else if(this.db.emailExists(EmailInput.getText().strip())){
+        } else if(this.db.emailExists(EmailInput.getText().strip().toLowerCase())){
             JOptionPane.showMessageDialog(null, "Este email já possui uma conta!");
         }else{
             try{
